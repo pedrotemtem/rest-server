@@ -6,7 +6,6 @@ import com.appdetex.request.UpdateMarketplaceDetectionRequest;
 import com.appdetex.response.MarketplaceDetectionResponse;
 import com.appdetex.service.MarketplaceDetectionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -32,15 +31,15 @@ public class MarketplaceDetectionController {
         return marketplaceDetectionResponseList;
     }
 
-    
-    @PostMapping("create")
+
+    @PostMapping(value = "create")
     public MarketplaceDetectionResponse createMarketplaceDetection (@Valid @RequestBody CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
         MarketplaceDetection marketplaceDetection = marketplaceDetectionService.createMarketplaceDetection(createMarketplaceDetectionRequest);
 
         return new MarketplaceDetectionResponse(marketplaceDetection);
     }
 
-    @PutMapping("update")
+    @PutMapping(value = "update")
     public MarketplaceDetectionResponse updateMarketplaceDetection (@Valid @RequestBody UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest){
         MarketplaceDetection marketplaceDetection = marketplaceDetectionService.updateMarketplaceDetection(updateMarketplaceDetectionRequest);
 
