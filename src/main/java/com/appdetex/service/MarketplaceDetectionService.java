@@ -40,5 +40,11 @@ public class MarketplaceDetectionService {
         return marketplaceDetection;
     }
 
+    public String deleteMarketplaceDetection (long id){
+        marketplaceDetectionRepository.deleteById(id);
+
+        return "Marketplace Detection with {id} deleted successfully";
+    }
+
 
 }
