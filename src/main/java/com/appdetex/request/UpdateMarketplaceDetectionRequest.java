@@ -7,36 +7,34 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-public class CreateMarketplaceDetectionRequest {
+public class UpdateMarketplaceDetectionRequest {
 
-    @NotNull
+    @NotNull(message = "id can't be null")
+    private Long id;
+
     private String title;
 
     private String description;
 
-    @NotNull
-    private String url;
-
     private String imageUrl;
+
+    private String price;
 
     private String paidSearch;
 
-    @NotNull
     private Integer orderOnPage;
 
     private String date;
 
     private String sellerName;
 
-    @NotNull
-    private Integer marketplaceId;
+    private String marketplaceId;
 
-    @NotNull
     private Integer statusId;
 
-    @NotNull
     private Integer stateId;
 
     private Integer reasonCodesId;
+
 
 }
