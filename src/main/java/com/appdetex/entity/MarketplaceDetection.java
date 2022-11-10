@@ -1,6 +1,5 @@
 package com.appdetex.entity;
-
-import com.appdetex.request.CreateMarketplaceDetection;
+import com.appdetex.request.CreateMarketplaceDetectionRequest;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -38,8 +37,11 @@ public class MarketplaceDetection {
     @Column(name = "paid_search")
     private String paidSearch;
 
+    @Column(name ="order_on_page")
+    private Integer orderOnPage;
+
     @Column(name = "date")
-    private Date date;
+    private String date;
 
     @Column(name = "seller_name")
     private String sellerName;
@@ -57,13 +59,14 @@ public class MarketplaceDetection {
     private Integer reasonCodesId;
 
 
-    public MarketplaceDetection(CreateMarketplaceDetection createMarketplaceDetection) {
+    public MarketplaceDetection(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
         this.title = title;
         this.description = description;
         this.url = url;
         this.imageUrl = imageUrl;
         this.price = price;
         this.paidSearch = paidSearch;
+        this.orderOnPage = orderOnPage;
         this.date = date;
         this.sellerName = sellerName;
         this.marketplaceId = marketplaceId;

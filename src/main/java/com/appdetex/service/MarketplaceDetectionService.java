@@ -2,6 +2,7 @@ package com.appdetex.service;
 
 import com.appdetex.entity.MarketplaceDetection;
 import com.appdetex.repository.MarketplaceDetectionRepository;
+import com.appdetex.request.CreateMarketplaceDetectionRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,5 +17,12 @@ public class MarketplaceDetectionService {
 
     public List<MarketplaceDetection> getAllMarketplaceDetection(){
         return marketplaceDetectionRepository.findAll();
+    }
+
+    public MarketplaceDetection createMarketplaceDetection(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest){
+        MarketplaceDetection marketplaceDetection = new MarketplaceDetection(createMarketplaceDetectionRequest);
+
+        marketplaceDetection= marketplaceDetectionRepository.save(marketplaceDetection);
+        return marketplaceDetection;
     }
 }

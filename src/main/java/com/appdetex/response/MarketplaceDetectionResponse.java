@@ -27,7 +27,9 @@ public class MarketplaceDetectionResponse {
 
     private String paidSearch;
 
-    private Date date;
+    private Integer orderOnPage;
+
+    private String date;
 
     private String sellerName;
 
@@ -49,6 +51,7 @@ public class MarketplaceDetectionResponse {
         this.imageUrl = marketplaceDetection.getImageUrl();
         this.price = marketplaceDetection.getPrice();
         this.paidSearch = marketplaceDetection.getPaidSearch();
+        this.orderOnPage = marketplaceDetection.getOrderOnPage();
         this.date = marketplaceDetection.getDate();
         this.sellerName = marketplaceDetection.getSellerName();
         this.marketplaceId = marketplaceDetection.getMarketplaceId();
