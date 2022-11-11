@@ -2,7 +2,8 @@ package com.appdetex.controller;
 
 import com.appdetex.entity.Audit;
 import com.appdetex.request.CreateAnalystRequest;
-import com.appdetex.request.CreateAuditRequest;
+import com.appdetex.request.UpdateAnalystRequest;
+import com.appdetex.request.UpdateAuditRequest;
 import com.appdetex.response.AnalystResponse;
 import com.appdetex.response.AuditResponse;
 import com.appdetex.service.AnalystService;
@@ -10,6 +11,7 @@ import com.appdetex.entity.Analyst;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +37,13 @@ public class AnalystController {
     @PostMapping("create")
     public AnalystResponse createAnalyst(@RequestBody CreateAnalystRequest createAnalystRequest){
         Analyst analyst = analystService.createAnalyst(createAnalystRequest);
+
+        return new AnalystResponse(analyst);
+    }
+
+    @PutMapping("update")
+    public AnalystResponse updateAnalyst(@Valid @RequestBody UpdateAnalystRequest updateAnalystRequest){
+        Analyst analyst = analystService.updateAnalyst(updateAnalystRequest);
 
         return new AnalystResponse(analyst);
     }
