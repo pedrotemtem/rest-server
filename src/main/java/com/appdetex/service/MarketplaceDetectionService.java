@@ -33,7 +33,7 @@ public class MarketplaceDetectionService {
 
         if (updateMarketplaceDetectionRequest.getTitle() != null &&
                 !updateMarketplaceDetectionRequest.getTitle().isEmpty()){
-            marketplaceDetection.setStateId(updateMarketplaceDetectionRequest.getStateId());
+            marketplaceDetection.setTitle(updateMarketplaceDetectionRequest.getTitle());
         }
 
         marketplaceDetection = marketplaceDetectionRepository.save(marketplaceDetection);

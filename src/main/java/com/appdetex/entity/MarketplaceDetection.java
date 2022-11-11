@@ -60,19 +60,18 @@ public class MarketplaceDetection {
 
 
     public MarketplaceDetection(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
-        this.title = title;
-        this.description = description;
-        this.url = url;
-        this.imageUrl = imageUrl;
-        this.price = price;
-        this.paidSearch = paidSearch;
-        this.orderOnPage = orderOnPage;
-        this.date = date;
-        this.sellerName = sellerName;
-        this.marketplaceId = marketplaceId;
-        this.statusId = statusId;
-        this.stateId = stateId;
-        this.reasonCodesId = reasonCodesId;
-
+        this.title = createMarketplaceDetectionRequest.getTitle();
+        this.description = createMarketplaceDetectionRequest.getDescription();
+        this.url = createMarketplaceDetectionRequest.getUrl();
+        this.imageUrl = createMarketplaceDetectionRequest.getImageUrl();
+        this.price = createMarketplaceDetectionRequest.getPrice();
+        this.paidSearch = createMarketplaceDetectionRequest.getPaidSearch();
+        this.orderOnPage = createMarketplaceDetectionRequest.getOrderOnPage();
+        this.date = createMarketplaceDetectionRequest.getDate();
+        this.sellerName = createMarketplaceDetectionRequest.getSellerName();
+        this.marketplaceId = createMarketplaceDetectionRequest.getMarketplaceId();
+        this.statusId = createMarketplaceDetectionRequest.getStatusId();
+        this.stateId = createMarketplaceDetectionRequest.getStateId();
+        this.reasonCodesId = createMarketplaceDetectionRequest.getReasonCodesId();
     }
 }

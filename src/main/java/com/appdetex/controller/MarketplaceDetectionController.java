@@ -6,7 +6,7 @@ import com.appdetex.request.UpdateMarketplaceDetectionRequest;
 import com.appdetex.response.MarketplaceDetectionResponse;
 import com.appdetex.service.MarketplaceDetectionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;

@@ -17,6 +17,8 @@ public class CreateMarketplaceDetectionRequest {
 
     private String imageUrl;
 
+    private String price;
+
     private String paidSearch;
 
     private Integer orderOnPage;
