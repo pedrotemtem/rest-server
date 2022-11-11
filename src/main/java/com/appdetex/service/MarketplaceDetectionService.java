@@ -21,6 +21,7 @@ public class MarketplaceDetectionService {
 
     public MarketplaceDetection createMarketplaceDetection(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
         MarketplaceDetection marketplaceDetection = new MarketplaceDetection(createMarketplaceDetectionRequest);
+
         marketplaceDetection = marketplaceDetectionRepository.save(marketplaceDetection);
         return marketplaceDetection;
     }
