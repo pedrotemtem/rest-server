@@ -1,11 +1,8 @@
 package com.appdetex.controller;
 
-import com.appdetex.entity.Audit;
 import com.appdetex.request.CreateAnalystRequest;
 import com.appdetex.request.UpdateAnalystRequest;
-import com.appdetex.request.UpdateAuditRequest;
 import com.appdetex.response.AnalystResponse;
-import com.appdetex.response.AuditResponse;
 import com.appdetex.service.AnalystService;
 import com.appdetex.entity.Analyst;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,5 +43,10 @@ public class AnalystController {
         Analyst analyst = analystService.updateAnalyst(updateAnalystRequest);
 
         return new AnalystResponse(analyst);
+    }
+
+    @DeleteMapping("delete/{id}")
+    public String deleteAnalyst(@PathVariable int id){
+        return analystService.deleteAnalyst(id);
     }
 }

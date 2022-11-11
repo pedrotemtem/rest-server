@@ -25,7 +25,7 @@ public class MarketplaceDetectionService {
         return marketplaceDetection;
     }
 
-    public MarketplaceDetection updateMarketplaceDetections(UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest) {
+    public MarketplaceDetection updateMarketplaceDetection(UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest) {
         MarketplaceDetection marketplaceDetection = marketplaceDetectionRepository.findById(updateMarketplaceDetectionRequest.getId()).get();
 
         if (updateMarketplaceDetectionRequest.getState() != null && !updateMarketplaceDetectionRequest.getState().isEmpty()) {
@@ -40,5 +40,10 @@ public class MarketplaceDetectionService {
 
         marketplaceDetection = marketplaceDetectionRepository.save(marketplaceDetection);
         return marketplaceDetection;
+    }
+
+    public String deleteMarketplaceDetection (int id){
+        marketplaceDetectionRepository.deleteById(id);
+        return "Detection has been deleted successfully";
     }
 }

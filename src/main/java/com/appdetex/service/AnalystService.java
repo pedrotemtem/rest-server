@@ -1,11 +1,9 @@
 package com.appdetex.service;
 
-import com.appdetex.entity.Audit;
 import com.appdetex.repository.AnalystRepository;
 import com.appdetex.entity.Analyst;
 import com.appdetex.request.CreateAnalystRequest;
 import com.appdetex.request.UpdateAnalystRequest;
-import com.appdetex.request.UpdateAuditRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,5 +40,10 @@ public class AnalystService {
 
         analyst = analystRepository.save(analyst);
         return analyst;
+    }
+
+    public String deleteAnalyst (int id){
+        analystRepository.deleteById(id);
+        return "Analyst has been deleted successfully";
     }
 }

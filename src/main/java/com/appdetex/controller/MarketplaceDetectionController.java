@@ -2,6 +2,7 @@ package com.appdetex.controller;
 
 import com.appdetex.entity.MarketplaceDetection;
 import com.appdetex.request.CreateMarketplaceDetectionRequest;
+import com.appdetex.request.UpdateMarketplaceDetectionRequest;
 import com.appdetex.response.MarketplaceDetectionResponse;
 import com.appdetex.service.MarketplaceDetectionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +35,17 @@ public class MarketplaceDetectionController {
     public MarketplaceDetectionResponse createMarketplaceDetection(@Valid @RequestBody CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
         MarketplaceDetection marketplaceDetection = marketplaceDetectionService.createMarketplaceDetection(createMarketplaceDetectionRequest);
         return new MarketplaceDetectionResponse(marketplaceDetection);
+    }
+
+    @PutMapping("update")
+    public MarketplaceDetectionResponse updateMarketplaceDetection(@Valid @RequestBody UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest){
+        MarketplaceDetection marketplaceDetection = marketplaceDetectionService.updateMarketplaceDetection(updateMarketplaceDetectionRequest);
+
+        return new MarketplaceDetectionResponse(marketplaceDetection);
+    }
+
+    @DeleteMapping("delete/{id}")
+    public String deleteMarketplaceDetection(@PathVariable int id){
+        return marketplaceDetectionService.deleteMarketplaceDetection(id);
     }
 }
