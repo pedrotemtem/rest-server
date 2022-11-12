@@ -46,8 +46,8 @@ public class MarketplaceDetectionController {
         return new MarketplaceDetectionResponse(marketplaceDetection);
     }
 
-    @DeleteMapping("delete/{id}")
-    public String deleteMarketplaceDetection(@PathVariable int id){
+    @DeleteMapping("delete")
+    public String deleteMarketplaceDetection(@RequestParam int id){
         return marketplaceDetectionService.deleteMarketplaceDetection(id);
     }
 }
