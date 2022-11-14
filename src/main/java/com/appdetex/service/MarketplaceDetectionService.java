@@ -45,7 +45,7 @@ public class MarketplaceDetectionService {
             parameter = "state";
         }
         if (updateMarketplaceDetectionRequest.getStatus() != null && !updateMarketplaceDetectionRequest.getStatus().isEmpty()) {
-            updateMarketplaceDetectionRequest.setStatus(updateMarketplaceDetectionRequest.getStatus());
+            marketplaceDetection.setStatus(updateMarketplaceDetectionRequest.getStatus());
             parameter = "status";
         }
         if (updateMarketplaceDetectionRequest.getReason_code() != null && !updateMarketplaceDetectionRequest.getReason_code().isEmpty()) {
