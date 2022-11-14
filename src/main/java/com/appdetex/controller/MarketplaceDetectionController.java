@@ -36,6 +36,7 @@ public class MarketplaceDetectionController {
     @PostMapping("create")
     public MarketplaceDetectionResponse createMarketplaceDetection(@Valid @RequestBody CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
         MarketplaceDetection marketplaceDetection = marketplaceDetectionService.createMarketplaceDetection(createMarketplaceDetectionRequest);
+
         return new MarketplaceDetectionResponse(marketplaceDetection);
     }
 
