@@ -19,8 +19,8 @@ public class AuditService {
         return auditRepository.findAll();
     }
 
-    public List<Audit> getByMarketplaceDetection(int detection_id)  {
-        return auditRepository.findByMarketplaceDetectionsId(detection_id);
+    public List<Audit> getByMarketplaceDetection(int marketplace_detections_id)  {
+        return auditRepository.findByMarketplaceDetectionsId(marketplace_detections_id);
     }
 
     public Audit createAudit (CreateAuditRequest createAuditRequest){
