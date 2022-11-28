@@ -1,14 +1,12 @@
 package com.appdetex.controller;
 
 import com.appdetex.request.CreateAuditRequest;
-import com.appdetex.request.UpdateAuditRequest;
 import com.appdetex.response.AuditResponse;
 import com.appdetex.service.AuditService;
 import com.appdetex.entity.Audit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,18 +34,6 @@ public class AuditController {
         Audit audit = auditService.createAudit(createAuditRequest);
 
         return new AuditResponse(audit);
-    }
-
-    @PutMapping("update")
-    public AuditResponse updateAudit(@Valid @RequestBody UpdateAuditRequest updateAuditRequest){
-        Audit audit = auditService.updateAudit(updateAuditRequest);
-
-        return new AuditResponse(audit);
-    }
-
-    @DeleteMapping("delete/{id}")
-    public String deleteAudit(@PathVariable int id){
-        return auditService.deleteAudit(id);
     }
 
 }

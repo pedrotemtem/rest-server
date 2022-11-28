@@ -33,25 +33,7 @@ public class MarketplaceDetectionService {
         MarketplaceDetection marketplaceDetection = new MarketplaceDetection(createMarketplaceDetectionRequest);
         marketplaceDetection = marketplaceDetectionRepository.save(marketplaceDetection);
 
-        postAuditCreate(createMarketplaceDetectionRequest);
         return marketplaceDetection;
-    }
-
-    private static void postAuditCreate(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
-
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-
-        try (CloseableHttpClient client = HttpClients.createDefault()) {
-            HttpPost httpPost = new HttpPost("http://localhost:8081/api/audit/create");
-            String json = "{ \"analyst_id\" : \"1\",\n\"marketplace_detection_id\" : \"" + createMarketplaceDetectionRequest.getId()
-                    + "\",\n\"parameter\" : \"create\",\n\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
-            StringEntity entity = new StringEntity(json, "UTF-8");
-            httpPost.setEntity(entity);
-            httpPost.setHeader("Accept", "application/json");
-            httpPost.setHeader("Content-type", "application/json; charset=UTF-8");
-            CloseableHttpResponse response = client.execute(httpPost);
-        } catch (ClientProtocolException e) { throw new RuntimeException(e);
-        } catch (IOException e) { throw new RuntimeException(e); }
     }
 
     public MarketplaceDetection updateMarketplaceDetection(UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest) {
@@ -71,44 +53,8 @@ public class MarketplaceDetectionService {
             marketplaceDetection.setReason_code(updateMarketplaceDetectionRequest.getReason_code());
         }
 
-        postAuditUpdate(updateMarketplaceDetectionRequest, parameter);
         marketplaceDetection = marketplaceDetectionRepository.save(marketplaceDetection);
         return marketplaceDetection;
-    }
-
-    private static void postAuditUpdate(UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest, String parameter) {
-
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-
-        if (parameter == "state") {
-            try (CloseableHttpClient client = HttpClients.createDefault()) {
-                HttpPost httpPost = new HttpPost("http://localhost:8081/api/audit/create");
-                String json = "{ \"analyst_id\" : \"1\",\n\"marketplace_detection_id\" : \"" + updateMarketplaceDetectionRequest.getId()
-                        + "\",\n\"parameter\" : \"state\",\n\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
-                StringEntity entity = new StringEntity(json, "UTF-8");
-                httpPost.setEntity(entity);
-                httpPost.setHeader("Accept", "application/json");
-                httpPost.setHeader("Content-type", "application/json; charset=UTF-8");
-                CloseableHttpResponse response = client.execute(httpPost);
-                parameter = null;
-            } catch (ClientProtocolException e) { throw new RuntimeException(e);
-            } catch (IOException e) { throw new RuntimeException(e); }
-        }
-        else if (parameter == "state") {
-            try (CloseableHttpClient client = HttpClients.createDefault()) {
-                HttpPost httpPost = new HttpPost("http://localhost:8081/api/audit/create");
-                String json = "{ \"analyst_id\" : \"1\",\n\"marketplace_detection_id\" : \"" + updateMarketplaceDetectionRequest.getId()
-                        + "\",\n\"parameter\" : \"status\",\n\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
-                StringEntity entity = new StringEntity(json, "UTF-8");
-                httpPost.setEntity(entity);
-                httpPost.setHeader("Accept", "application/json");
-                httpPost.setHeader("Content-type", "application/json; charset=UTF-8");
-                CloseableHttpResponse response = client.execute(httpPost);
-                parameter = null;
-            } catch (ClientProtocolException e) { throw new RuntimeException(e);
-            } catch (IOException e) { throw new RuntimeException(e);
-            }
-        }
     }
 
     public String deleteMarketplaceDetection (int id) {
