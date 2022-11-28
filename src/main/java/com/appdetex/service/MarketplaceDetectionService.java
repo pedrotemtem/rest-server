@@ -45,16 +45,55 @@ public class MarketplaceDetectionService {
             marketplaceDetection.setState(updateMarketplaceDetectionRequest.getState());
             parameter = "state";
         }
+        postAudit(updateMarketplaceDetectionRequest, parameter);
+
         if (updateMarketplaceDetectionRequest.getStatus() != null && !updateMarketplaceDetectionRequest.getStatus().isEmpty()) {
             marketplaceDetection.setStatus(updateMarketplaceDetectionRequest.getStatus());
             parameter = "status";
         }
+        postAudit(updateMarketplaceDetectionRequest, parameter);
+
         if (updateMarketplaceDetectionRequest.getReason_code() != null && !updateMarketplaceDetectionRequest.getReason_code().isEmpty()) {
             marketplaceDetection.setReason_code(updateMarketplaceDetectionRequest.getReason_code());
         }
 
         marketplaceDetection = marketplaceDetectionRepository.save(marketplaceDetection);
         return marketplaceDetection;
+    }
+
+    private static void postAudit(UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest, String parameter) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        if (parameter == "state") {
+            try (CloseableHttpClient client = HttpClients.createDefault()) {
+                HttpPost httpPost = new HttpPost("http://localhost:8081/api/audit/create");
+                String json = "{ \"user_id\" : \"1\",\"detection_id\" : \"" + updateMarketplaceDetectionRequest.getId() + "\",\"parameter\" : \"state\",\"datetime\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
+                StringEntity entity = new StringEntity(json, "UTF-8");
+                httpPost.setEntity(entity);
+                httpPost.setHeader("Accept", "application/json");
+                httpPost.setHeader("Content-type", "application/json;charset=UTF-8");
+                CloseableHttpResponse response = client.execute(httpPost);
+                parameter = null;
+            } catch (ClientProtocolException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        } if (parameter == "status") {
+            try (CloseableHttpClient client = HttpClients.createDefault()) {
+                HttpPost httpPost = new HttpPost("http://localhost:8081/api/audit/create");
+                String json = "{ \"user_id\" : \"1\",\"detection_id\" : \"" + updateMarketplaceDetectionRequest.getId() + "\",\"parameter\" : \"status\",\"datetime\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
+                StringEntity entity = new StringEntity(json, "UTF-8");
+                httpPost.setEntity(entity);
+                httpPost.setHeader("Accept", "application/json");
+                httpPost.setHeader("Content-type", "application/json;charset=UTF-8");
+                CloseableHttpResponse response = client.execute(httpPost);
+                parameter = null;
+            } catch (ClientProtocolException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     public String deleteMarketplaceDetection (int id) {
