@@ -39,7 +39,7 @@ public class MarketplaceDetectionService {
     public MarketplaceDetection updateMarketplaceDetection(UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest) {
 
         MarketplaceDetection marketplaceDetection = marketplaceDetectionRepository.findById(updateMarketplaceDetectionRequest.getId()).get();
-        String parameter = null;
+        String parameter;
 
         if (updateMarketplaceDetectionRequest.getState() != null && !updateMarketplaceDetectionRequest.getState().isEmpty()) {
             marketplaceDetection.setState(updateMarketplaceDetectionRequest.getState());
@@ -75,13 +75,10 @@ public class MarketplaceDetectionService {
                 httpPost.setHeader("Content-type", "application/json;charset=UTF-8");
                 CloseableHttpResponse response = client.execute(httpPost);
                 parameter = null;
-            } catch (ClientProtocolException e) {
-                throw new RuntimeException(e);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            } catch (ClientProtocolException e) { throw new RuntimeException(e);
+            } catch (IOException e) { throw new RuntimeException(e); }
 
-        } if (parameter.equals("status")) {
+        } else if (parameter.equals("status")) {
             try (CloseableHttpClient client = HttpClients.createDefault()) {
                 HttpPost httpPost = new HttpPost("http://localhost:8081/api/audit/create");
                 String json = "{ \"analysts_id\" : \"1\",\"marketplace_detections_id\" : \"" + updateMarketplaceDetectionRequest.getId() + "\",\"parameter\" : \"status\",\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
@@ -91,11 +88,8 @@ public class MarketplaceDetectionService {
                 httpPost.setHeader("Content-type", "application/json;charset=UTF-8");
                 CloseableHttpResponse response = client.execute(httpPost);
                 parameter = null;
-            } catch (ClientProtocolException e) {
-                throw new RuntimeException(e);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            } catch (ClientProtocolException e) { throw new RuntimeException(e);
+            } catch (IOException e) { throw new RuntimeException(e); }
         }
     }
 
