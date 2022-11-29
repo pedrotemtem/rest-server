@@ -67,7 +67,7 @@ public class MarketplaceDetectionService {
 
         if (parameter.equals("state")) {
             try (CloseableHttpClient client = HttpClients.createDefault()) {
-                HttpPost httpPost = new HttpPost("http://localhost:8008/api/audit/create");
+                HttpPost httpPost = new HttpPost("http://localhost:8081/api/audit/create");
                 String json = "{ \"analysts_id\" : \"1\",\"marketplace_detections_id\" : \"" + updateMarketplaceDetectionRequest.getId() + "\",\"parameter\" : \"state\",\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
                 StringEntity entity = new StringEntity(json, "UTF-8");
                 httpPost.setEntity(entity);

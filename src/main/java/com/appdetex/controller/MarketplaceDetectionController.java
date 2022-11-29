@@ -9,7 +9,6 @@ import com.appdetex.service.MarketplaceDetectionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,14 +34,14 @@ public class MarketplaceDetectionController {
     }
 
     @PostMapping("create")
-    public MarketplaceDetectionResponse createMarketplaceDetection(@Valid @RequestBody CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
+    public MarketplaceDetectionResponse createMarketplaceDetection(@RequestBody CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
         MarketplaceDetection marketplaceDetection = marketplaceDetectionService.createMarketplaceDetection(createMarketplaceDetectionRequest);
 
         return new MarketplaceDetectionResponse(marketplaceDetection);
     }
 
     @PutMapping("update")
-    public MarketplaceDetectionResponse updateMarketplaceDetection(@Valid @RequestBody UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest){
+    public MarketplaceDetectionResponse updateMarketplaceDetection(@RequestBody UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest){
         MarketplaceDetection marketplaceDetection = marketplaceDetectionService.updateMarketplaceDetection(updateMarketplaceDetectionRequest);
 
         return new MarketplaceDetectionResponse(marketplaceDetection);

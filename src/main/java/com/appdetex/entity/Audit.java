@@ -37,4 +37,5 @@ public class Audit {
         this.parameter = createAuditRequest.getParameter();
         this.date_time = createAuditRequest.getDate_time();
     }
+
 }
