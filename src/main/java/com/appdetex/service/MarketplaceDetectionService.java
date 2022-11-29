@@ -65,7 +65,7 @@ public class MarketplaceDetectionService {
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 
-        if (parameter == "state") {
+        if (parameter.equals("state")) {
             try (CloseableHttpClient client = HttpClients.createDefault()) {
                 HttpPost httpPost = new HttpPost("http://localhost:8081/api/audit/create");
                 String json = "{ \"analysts_id\" : \"1\",\"marketplace_detections_id\" : \"" + updateMarketplaceDetectionRequest.getId() + "\",\"parameter\" : \"state\",\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
@@ -81,7 +81,7 @@ public class MarketplaceDetectionService {
                 throw new RuntimeException(e);
             }
 
-        } if (parameter == "status") {
+        } if (parameter.equals("status")) {
             try (CloseableHttpClient client = HttpClients.createDefault()) {
                 HttpPost httpPost = new HttpPost("http://localhost:8081/api/audit/create");
                 String json = "{ \"analysts_id\" : \"1\",\"marketplace_detections_id\" : \"" + updateMarketplaceDetectionRequest.getId() + "\",\"parameter\" : \"status\",\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";

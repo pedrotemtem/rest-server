@@ -23,7 +23,7 @@ public class Audit {
     private Integer analysts_id;
 
     @Column(name = "marketplace_detections_id")
-    private Integer marketplace_detections_id;
+    private Integer marketplaceDetectionsId;
 
     @Column(name = "parameter")
     private String parameter;
@@ -33,7 +33,7 @@ public class Audit {
 
     public Audit(CreateAuditRequest createAuditRequest){
         this.analysts_id = createAuditRequest.getAnalysts_id();
-        this.marketplace_detections_id = createAuditRequest.getMarketplace_detections_id();
+        this.marketplaceDetectionsId = createAuditRequest.getMarketplace_detections_id();
         this.parameter = createAuditRequest.getParameter();
         this.date_time = createAuditRequest.getDate_time();
     }

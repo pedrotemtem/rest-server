@@ -36,7 +36,7 @@ public class AuditService {
             audit.setAnalysts_id(updateAuditRequest.getAnalysts_id());
         }
         if(updateAuditRequest.getMarketplace_detections_id() != 0){
-            audit.setMarketplace_detections_id(updateAuditRequest.getMarketplace_detections_id());
+            audit.setMarketplaceDetectionsId(updateAuditRequest.getMarketplace_detections_id());
         }
         if(updateAuditRequest.getParameter() != null && !updateAuditRequest.getParameter().isEmpty()){
             audit.setParameter(updateAuditRequest.getParameter());
