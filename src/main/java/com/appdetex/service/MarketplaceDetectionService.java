@@ -64,11 +64,12 @@ public class MarketplaceDetectionService {
     private static void postAudit(UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest, String parameter) {
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        int analystId = updateMarketplaceDetectionRequest.getAnalystId();
 
         if (parameter.equals("state")) {
             try (CloseableHttpClient client = HttpClients.createDefault()) {
                 HttpPost httpPost = new HttpPost("http://localhost:8008/api/audit/create");
-                String json = "{ \"analysts_id\" : \"1\",\"marketplace_detections_id\" : \"" + updateMarketplaceDetectionRequest.getId() + "\",\"parameter\" : \"state\",\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
+                String json = "{ \"analysts_id\" : \""+ analystId +"\",\"marketplace_detections_id\" : \"" + updateMarketplaceDetectionRequest.getId() + "\",\"parameter\" : \"state\",\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
                 StringEntity entity = new StringEntity(json, "UTF-8");
                 httpPost.setEntity(entity);
                 httpPost.setHeader("Accept", "application/json");
@@ -83,7 +84,7 @@ public class MarketplaceDetectionService {
         } else if (parameter.equals("status")) {
             try (CloseableHttpClient client = HttpClients.createDefault()) {
                 HttpPost httpPost = new HttpPost("http://localhost:8008/api/audit/create");
-                String json = "{ \"analysts_id\" : \"1\",\"marketplace_detections_id\" : \"" + updateMarketplaceDetectionRequest.getId() + "\",\"parameter\" : \"status\",\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
+                String json = "{ \"analysts_id\" : \"" + analystId + "\",\"marketplace_detections_id\" : \"" + updateMarketplaceDetectionRequest.getId() + "\",\"parameter\" : \"status\",\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
                 StringEntity entity = new StringEntity(json, "UTF-8");
                 httpPost.setEntity(entity);
                 httpPost.setHeader("Accept", "application/json");
