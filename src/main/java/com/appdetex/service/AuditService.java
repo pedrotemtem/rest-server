@@ -19,7 +19,7 @@ public class AuditService {
         return auditRepository.findAll();
     }
 
-    public List<Audit> getByMarketplaceDetection(int marketplace_detections_id)  {
+    public List<Audit> getByMarketplaceDetectionId(int marketplace_detections_id)  {
         return auditRepository.findByMarketplaceDetectionsId(marketplace_detections_id);
     }
 
