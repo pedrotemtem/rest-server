@@ -39,4 +39,7 @@ public class UpdateMarketplaceDetectionRequest {
     private String reason_code;
 
     private Integer analystId;
+
+    private Integer account_id;
+
 }

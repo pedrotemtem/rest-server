@@ -57,6 +57,9 @@ public class MarketplaceDetection {
     @Column(name = "reason_code")
     private String reason_code;
 
+    @Column(name = "account_id")
+    private Integer accountId;
+
     public MarketplaceDetection(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
         this.id = createMarketplaceDetectionRequest.getId();
         this.order_on_page = createMarketplaceDetectionRequest.getOrder_on_page();
@@ -72,5 +75,6 @@ public class MarketplaceDetection {
         this.status = createMarketplaceDetectionRequest.getStatus();
         this.state = createMarketplaceDetectionRequest.getState();
         this.reason_code = createMarketplaceDetectionRequest.getReason_code();
+        this.accountId = createMarketplaceDetectionRequest.getAccount_id();
     }
 }

@@ -35,4 +35,6 @@ public class CreateMarketplaceDetectionRequest {
 
     private String reason_code;
 
+    private Integer account_id;
+
 }
