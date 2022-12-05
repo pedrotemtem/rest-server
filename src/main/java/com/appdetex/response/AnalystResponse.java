@@ -6,7 +6,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-
 public class AnalystResponse {
 
     private Integer id;
