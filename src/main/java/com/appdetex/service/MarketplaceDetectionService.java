@@ -25,7 +25,13 @@ public class MarketplaceDetectionService {
     MarketplaceDetectionRepository marketplaceDetectionRepository;
 
     public List<MarketplaceDetection> getAllMarketplaceDetections() {
+
         return marketplaceDetectionRepository.findAll();
+    }
+
+    public List<MarketplaceDetection> getByAccountId(int account_id)  {
+
+        return marketplaceDetectionRepository.findByAccountId(account_id);
     }
 
     public MarketplaceDetection createMarketplaceDetection(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
