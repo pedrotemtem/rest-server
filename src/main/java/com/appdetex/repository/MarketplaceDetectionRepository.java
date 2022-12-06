@@ -4,6 +4,11 @@ import com.appdetex.entity.MarketplaceDetection;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
+
 @Repository
-public interface MarketplaceDetectionRepository extends JpaRepository<MarketplaceDetection, Long> {
+public interface MarketplaceDetectionRepository extends JpaRepository<MarketplaceDetection, Integer> {
+
+    List<MarketplaceDetection> findByAccountId(int account_id);
 }

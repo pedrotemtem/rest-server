@@ -3,38 +3,43 @@ package com.appdetex.request;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 
 @Getter
 @Setter
 public class UpdateMarketplaceDetectionRequest {
 
-    @NotNull(message = "id can't be null")
-    private Long id;
+    @Positive(message = "Detection ID is required")
+    private Integer id;
+
+    private Integer order_on_page;
+
+    private String capture_date;
 
     private String title;
 
     private String description;
 
-    private String imageUrl;
+    private String url;
+
+    private String image_url;
 
     private String price;
 
-    private String paidSearch;
+    private String paid_search;
 
-    private Integer orderOnPage;
+    private String seller;
 
-    private String date;
+    private String marketplace;
 
-    private String sellerName;
+    private String status;
 
-    private String marketplaceId;
+    private String state;
 
-    private Integer statusId;
+    private String reason_code;
 
-    private Integer stateId;
+    private Integer analystId;
 
-    private Integer reasonCodesId;
-
+    private Integer account_id;
 
 }

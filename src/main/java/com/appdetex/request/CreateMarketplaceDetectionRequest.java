@@ -3,11 +3,15 @@ package com.appdetex.request;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.validation.constraints.NotNull;
-
-@Getter
 @Setter
+@Getter
 public class CreateMarketplaceDetectionRequest {
+
+    private Integer id;
+
+    private Integer order_on_page;
+
+    private String capture_date;
 
     private String title;
 
@@ -15,24 +19,22 @@ public class CreateMarketplaceDetectionRequest {
 
     private String url;
 
-    private String imageUrl;
+    private String image_url;
 
     private String price;
 
-    private String paidSearch;
+    private String paid_search;
 
-    private Integer orderOnPage;
+    private String seller;
 
-    private String date;
+    private String marketplace;
 
-    private String sellerName;
+    private String state;
 
-    private Integer marketplaceId;
+    private String status;
 
-    private Integer statusId;
+    private String reason_code;
 
-    private Integer stateId;
-
-    private Integer reasonCodesId;
+    private Integer account_id;
 
 }

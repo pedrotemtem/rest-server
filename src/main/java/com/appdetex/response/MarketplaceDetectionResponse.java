@@ -1,20 +1,18 @@
 package com.appdetex.response;
 
-
 import com.appdetex.entity.MarketplaceDetection;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.validation.constraints.NotNull;
-import java.util.Date;
-
 
 @Getter
 @Setter
 public class MarketplaceDetectionResponse {
 
-    private long id;
+    private Integer id;
+
+    private Integer order_on_page;
+
+    private String capture_date;
 
     private String title;
 
@@ -22,42 +20,39 @@ public class MarketplaceDetectionResponse {
 
     private String url;
 
-    private String imageUrl;
+    private String image_url;
 
     private String price;
 
-    private String paidSearch;
+    private String paid_search;
 
-    private Integer orderOnPage;
+    private String seller;
 
-    private String date;
+    private String marketplace;
 
-    private String sellerName;
+    private String status;
 
-    private Integer marketplaceId;
+    private String state;
 
-    private Integer statusId;
+    private String reason_code;
 
-    private Integer stateId;
-
-    private Integer reasonCodesId;
-
-
+    private Integer account_id;
 
     public MarketplaceDetectionResponse(MarketplaceDetection marketplaceDetection) {
         this.id = marketplaceDetection.getId();
+        this.order_on_page = marketplaceDetection.getOrder_on_page();
+        this.capture_date = marketplaceDetection.getCapture_date();
         this.title = marketplaceDetection.getTitle();
         this.description = marketplaceDetection.getDescription();
         this.url = marketplaceDetection.getUrl();
-        this.imageUrl = marketplaceDetection.getImageUrl();
+        this.image_url = marketplaceDetection.getImage_url();
         this.price = marketplaceDetection.getPrice();
-        this.paidSearch = marketplaceDetection.getPaidSearch();
-        this.orderOnPage = marketplaceDetection.getOrderOnPage();
-        this.date = marketplaceDetection.getDate();
-        this.sellerName = marketplaceDetection.getSellerName();
-        this.marketplaceId = marketplaceDetection.getMarketplaceId();
-        this.statusId = marketplaceDetection.getStatusId();
-        this.stateId = marketplaceDetection.getStateId();
-        this.reasonCodesId = marketplaceDetection.getReasonCodesId();
+        this.paid_search = marketplaceDetection.getPaid_search();
+        this.seller = marketplaceDetection.getSeller();
+        this.marketplace = marketplaceDetection.getMarketplace();
+        this.status = marketplaceDetection.getStatus();
+        this.state = marketplaceDetection.getState();
+        this.reason_code = marketplaceDetection.getReason_code();
+        this.account_id = marketplaceDetection.getAccountId();
     }
 }

@@ -1,25 +1,30 @@
 package com.appdetex.entity;
+
 import com.appdetex.request.CreateMarketplaceDetectionRequest;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import javax.persistence.*;
-import java.util.Date;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "marketplace_detections")
-@NoArgsConstructor
 public class MarketplaceDetection {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private Integer id;
 
-    @Column(name="title")
+    @Column(name = "order_on_page")
+    private Integer order_on_page;
+
+    @Column(name = "capture_date")
+    private String capture_date;
+
+    @Column(name = "title")
     private String title;
 
     @Column(name = "description")
@@ -29,49 +34,47 @@ public class MarketplaceDetection {
     private String url;
 
     @Column(name = "image_url")
-    private String imageUrl;
+    private String image_url;
 
     @Column(name = "price")
     private String price;
 
     @Column(name = "paid_search")
-    private String paidSearch;
+    private String paid_search;
 
-    @Column(name ="order_on_page")
-    private Integer orderOnPage;
+    @Column(name = "seller")
+    private String seller;
 
-    @Column(name = "date")
-    private String date;
+    @Column(name = "marketplace")
+    private String marketplace;
 
-    @Column(name = "seller_name")
-    private String sellerName;
+    @Column(name = "status")
+    private String status;
 
-    @Column(name = "marketplace_id")
-    private Integer marketplaceId;
+    @Column(name = "state")
+    private String state;
 
-    @Column(name = "status_id")
-    private Integer statusId;
+    @Column(name = "reason_code")
+    private String reason_code;
 
-    @Column(name = "state_id")
-    private Integer stateId;
-
-    @Column(name = "reason_codes_id")
-    private Integer reasonCodesId;
-
+    @Column(name = "account_id")
+    private Integer accountId;
 
     public MarketplaceDetection(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
+        this.id = createMarketplaceDetectionRequest.getId();
+        this.order_on_page = createMarketplaceDetectionRequest.getOrder_on_page();
+        this.capture_date = createMarketplaceDetectionRequest.getCapture_date();
         this.title = createMarketplaceDetectionRequest.getTitle();
         this.description = createMarketplaceDetectionRequest.getDescription();
         this.url = createMarketplaceDetectionRequest.getUrl();
-        this.imageUrl = createMarketplaceDetectionRequest.getImageUrl();
+        this.image_url = createMarketplaceDetectionRequest.getImage_url();
         this.price = createMarketplaceDetectionRequest.getPrice();
-        this.paidSearch = createMarketplaceDetectionRequest.getPaidSearch();
-        this.orderOnPage = createMarketplaceDetectionRequest.getOrderOnPage();
-        this.date = createMarketplaceDetectionRequest.getDate();
-        this.sellerName = createMarketplaceDetectionRequest.getSellerName();
-        this.marketplaceId = createMarketplaceDetectionRequest.getMarketplaceId();
-        this.statusId = createMarketplaceDetectionRequest.getStatusId();
-        this.stateId = createMarketplaceDetectionRequest.getStateId();
-        this.reasonCodesId = createMarketplaceDetectionRequest.getReasonCodesId();
+        this.paid_search = createMarketplaceDetectionRequest.getPaid_search();
+        this.seller = createMarketplaceDetectionRequest.getSeller();
+        this.marketplace = createMarketplaceDetectionRequest.getMarketplace();
+        this.status = createMarketplaceDetectionRequest.getStatus();
+        this.state = createMarketplaceDetectionRequest.getState();
+        this.reason_code = createMarketplaceDetectionRequest.getReason_code();
+        this.accountId = createMarketplaceDetectionRequest.getAccount_id();
     }
 }
