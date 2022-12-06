@@ -1,7 +1,9 @@
 package com.appdetex.controller;
 
+import com.appdetex.entity.MarketplaceDetection;
 import com.appdetex.request.CreateBrandTrackRequest;
 import com.appdetex.response.BrandTrackResponse;
+import com.appdetex.response.MarketplaceDetectionResponse;
 import com.appdetex.service.BrandTrackService;
 import com.appdetex.entity.BrandTrack;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,18 @@ public class BrandTrackController {
     @GetMapping("getAll")
     public List<BrandTrackResponse> getAllBrandTracks() {
         List<BrandTrack> brandTrackList = brandTrackService.getAllBrandTracks();
+        List<BrandTrackResponse> brandTrackResponseList = new ArrayList<BrandTrackResponse>();
+
+        brandTrackList.stream().forEach(brandTrack -> {
+            brandTrackResponseList.add(new BrandTrackResponse(brandTrack));
+        });
+
+        return brandTrackResponseList;
+    }
+
+    @GetMapping("getByAccount/{account_id}")
+    public List<BrandTrackResponse> getByAccountId(@PathVariable int account_id){
+        List<BrandTrack> brandTrackList = brandTrackService.getByAccountId(account_id);
         List<BrandTrackResponse> brandTrackResponseList = new ArrayList<BrandTrackResponse>();
 
         brandTrackList.stream().forEach(brandTrack -> {
