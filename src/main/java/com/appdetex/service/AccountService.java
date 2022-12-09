@@ -28,6 +28,7 @@ public class AccountService {
         return account;
     }
 
+    //get account by account-id da detection
     public String deleteAccount (int id){
         accountRepository.deleteById(id);
         return "Account has been deleted successfully";

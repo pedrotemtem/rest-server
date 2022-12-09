@@ -1,9 +1,12 @@
 package com.appdetex.service;
 
+
 import com.appdetex.entity.MarketplaceDetection;
 import com.appdetex.repository.MarketplaceDetectionRepository;
 import com.appdetex.request.CreateMarketplaceDetectionRequest;
 import com.appdetex.request.UpdateMarketplaceDetectionRequest;
+import com.appdetex.rulesEngine.Rule1;
+import com.appdetex.rulesEngine.Rule2;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -37,6 +40,13 @@ public class MarketplaceDetectionService {
     public MarketplaceDetection createMarketplaceDetection(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
 
         MarketplaceDetection marketplaceDetection = new MarketplaceDetection(createMarketplaceDetectionRequest);
+
+        Rule1 rule1 = new Rule1();
+        rule1.rulesChecker(marketplaceDetection);
+
+        Rule2 rule2 = new Rule2();
+        rule2.rulesChecker(marketplaceDetection);
+
         marketplaceDetection = marketplaceDetectionRepository.save(marketplaceDetection);
 
         return marketplaceDetection;
