@@ -5,8 +5,8 @@ import com.appdetex.entity.MarketplaceDetection;
 import com.appdetex.repository.MarketplaceDetectionRepository;
 import com.appdetex.request.CreateMarketplaceDetectionRequest;
 import com.appdetex.request.UpdateMarketplaceDetectionRequest;
-import com.appdetex.rulesEngine.Rule1;
-import com.appdetex.rulesEngine.Rule2;
+import com.appdetex.rulesEngine.RuleJacuzziInflatable;
+import com.appdetex.rulesEngine.RuleJacuzziBrand;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -41,11 +41,12 @@ public class MarketplaceDetectionService {
 
         MarketplaceDetection marketplaceDetection = new MarketplaceDetection(createMarketplaceDetectionRequest);
 
-        Rule1 rule1 = new Rule1();
-        rule1.rulesChecker(marketplaceDetection);
+        RuleJacuzziBrand ruleJacuzziBrand = new RuleJacuzziBrand();
+        ruleJacuzziBrand.rulesChecker(marketplaceDetection);
 
-        Rule2 rule2 = new Rule2();
-        rule2.rulesChecker(marketplaceDetection);
+        RuleJacuzziInflatable ruleJacuzziInflatable = new RuleJacuzziInflatable();
+        ruleJacuzziInflatable.rulesChecker(marketplaceDetection);
+
 
         marketplaceDetection = marketplaceDetectionRepository.save(marketplaceDetection);
 

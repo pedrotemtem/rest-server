@@ -10,6 +10,7 @@ public class Rule3 extends RulesAbstract implements RulesInterface{
 
     @Override
     public MarketplaceDetection rulesChecker(MarketplaceDetection marketplaceDetection) {
-        return null;
+
+        return marketplaceDetection;
     }
 }
