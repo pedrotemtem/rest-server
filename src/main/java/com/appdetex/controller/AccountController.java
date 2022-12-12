@@ -7,6 +7,7 @@ import com.appdetex.entity.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +29,16 @@ public class AccountController {
         });
 
         return accountResponseList;
+    }
+
+    @GetMapping("getAccountNameByDetectionId/{detection_id}")
+    public String getAccountNameByDetectionId(@PathVariable int detection_id) throws IOException {
+        return accountService.getAccountNameByDetectionId(detection_id);
+    }
+
+    @GetMapping("getAccountName/{account_id}")
+    public String getAccountName(@PathVariable int account_id) {;
+        return accountService.getAccountNameById(account_id);
     }
 
     @PostMapping("create")

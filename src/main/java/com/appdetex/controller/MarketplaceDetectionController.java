@@ -35,6 +35,16 @@ public class MarketplaceDetectionController {
         return marketplaceDetectionResponseList;
     }
 
+    @GetMapping("getById/{id}")
+    public MarketplaceDetectionResponse getMarketplaceDetectionById(@PathVariable int id) {
+
+        MarketplaceDetection marketplaceDetection = marketplaceDetectionService.getDetection(id);
+
+
+        return new MarketplaceDetectionResponse(marketplaceDetection);
+
+    }
+
     @GetMapping("getByAccount/{account_id}")
     public List<MarketplaceDetectionResponse> getByAccountId(@PathVariable int account_id){
         List<MarketplaceDetection> marketplaceDetectionList = marketplaceDetectionService.getByAccountId(account_id);

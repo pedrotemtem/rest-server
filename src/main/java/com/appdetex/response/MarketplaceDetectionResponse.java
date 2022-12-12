@@ -36,7 +36,7 @@ public class MarketplaceDetectionResponse {
 
     private String reason_code;
 
-    private Integer account_id;
+    private Integer accountId;
 
     public MarketplaceDetectionResponse(MarketplaceDetection marketplaceDetection) {
         this.id = marketplaceDetection.getId();
@@ -53,6 +53,6 @@ public class MarketplaceDetectionResponse {
         this.status = marketplaceDetection.getStatus();
         this.state = marketplaceDetection.getState();
         this.reason_code = marketplaceDetection.getReason_code();
-        this.account_id = marketplaceDetection.getAccountId();
+        this.accountId = marketplaceDetection.getAccountId();
     }
 }
