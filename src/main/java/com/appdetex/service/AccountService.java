@@ -34,13 +34,14 @@ public class AccountService {
 
     public String getAccountNameByDetectionId(int detection_id) throws IOException {
 
+        // gets the detection with id detection_id
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpGet request = new HttpGet("http://localhost:8008/api/marketplacedetections/getById/"+ detection_id);
         CloseableHttpResponse response = httpClient.execute(request);
         HttpEntity entity = response.getEntity();
         String responseDetection = EntityUtils.toString(entity);
 
-
+        // converts the json string response to a MarketplaceDetection object
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         MarketplaceDetection detection = mapper.readValue(responseDetection, MarketplaceDetection.class);
