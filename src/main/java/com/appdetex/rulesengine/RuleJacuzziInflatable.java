@@ -1,4 +1,4 @@
-package com.appdetex.rulesEngine;
+package com.appdetex.rulesengine;
 
 import com.appdetex.entity.MarketplaceDetection;
 
@@ -14,6 +14,7 @@ public class RuleJacuzziInflatable extends RulesAbstract implements RulesInterfa
 
             if (marketplaceDetection.getDescription().toLowerCase().contains("inflatable")
                     || marketplaceDetection.getDescription().toLowerCase().contains("insuflável")
+                    || marketplaceDetection.getDescription().toLowerCase().contains("inflável")
                     || marketplaceDetection.getDescription().toLowerCase().contains("inflable")
                     || marketplaceDetection.getTitle().toLowerCase().contains("inflatable")
                     || marketplaceDetection.getTitle().toLowerCase().contains("insuflável")

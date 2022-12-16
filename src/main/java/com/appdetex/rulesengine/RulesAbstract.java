@@ -1,4 +1,4 @@
-package com.appdetex.rulesEngine;
+package com.appdetex.rulesengine;
 
 public abstract class RulesAbstract {
 

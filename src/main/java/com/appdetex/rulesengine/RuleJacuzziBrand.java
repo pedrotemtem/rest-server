@@ -1,4 +1,4 @@
-package com.appdetex.rulesEngine;
+package com.appdetex.rulesengine;
 
 import com.appdetex.entity.MarketplaceDetection;
 
