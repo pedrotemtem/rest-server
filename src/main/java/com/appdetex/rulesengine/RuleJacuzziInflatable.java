@@ -20,6 +20,7 @@ public class RuleJacuzziInflatable extends RulesAbstract implements RulesInterfa
                     || marketplaceDetection.getTitle().toLowerCase().contains("insuflável")
                     || marketplaceDetection.getTitle().toLowerCase().contains("inflable")) {
                 marketplaceDetection.setState("enforce");
+                marketplaceDetection.setReason_code("brand misuse");
             }
         }
         return marketplaceDetection;
