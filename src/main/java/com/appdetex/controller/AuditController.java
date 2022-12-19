@@ -20,7 +20,8 @@ public class AuditController {
     AuditService auditService;
 
     @GetMapping("getAll")
-    public List<AuditResponse> getAllAudits(){
+    public List<AuditResponse> getAllAudits() {
+
         List<Audit> auditList = auditService.getAllAudits();
         List<AuditResponse> auditResponseList = new ArrayList<AuditResponse>();
 
@@ -32,7 +33,8 @@ public class AuditController {
     }
 
     @GetMapping("getByMarketplaceDetection/{marketplaceDetectionsId}")
-    public List<AuditResponse> getByMarketplaceDetectionId(@PathVariable int marketplaceDetectionsId){
+    public List<AuditResponse> getByMarketplaceDetectionId(@PathVariable int marketplaceDetectionsId) {
+
         List<Audit> auditList = auditService.getByMarketplaceDetectionId(marketplaceDetectionsId);
         List<AuditResponse> auditResponseList = new ArrayList<AuditResponse>();
 
@@ -44,21 +46,22 @@ public class AuditController {
     }
 
     @PostMapping("create")
-    public AuditResponse createAudit(@RequestBody CreateAuditRequest createAuditRequest){
-        Audit audit = auditService.createAudit(createAuditRequest);
+    public AuditResponse createAudit(@RequestBody CreateAuditRequest createAuditRequest) {
 
+        Audit audit = auditService.createAudit(createAuditRequest);
         return new AuditResponse(audit);
     }
 
     @PutMapping("update")
     public AuditResponse updateAudit(@Valid @RequestBody UpdateAuditRequest updateAuditRequest){
-        Audit audit = auditService.updateAudit(updateAuditRequest);
 
+        Audit audit = auditService.updateAudit(updateAuditRequest);
         return new AuditResponse(audit);
     }
 
     @DeleteMapping("delete/{id}")
     public String deleteAudit(@PathVariable int id){
+
         return auditService.deleteAudit(id);
     }
 

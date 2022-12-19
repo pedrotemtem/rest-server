@@ -4,7 +4,6 @@ import com.appdetex.entity.MarketplaceDetection;
 
 public class RuleSellers extends RulesAbstract implements RulesInterface{
 
-    //checks if seller is apple for apple products
     public RuleSellers() {
     }
 
@@ -20,7 +19,6 @@ public class RuleSellers extends RulesAbstract implements RulesInterface{
                 && marketplaceDetection.getSeller().equals("Microsoft")){
             marketplaceDetection.setState("benign");
             marketplaceDetection.setReasonCode("fair-use");
-
         }
 
         return marketplaceDetection;

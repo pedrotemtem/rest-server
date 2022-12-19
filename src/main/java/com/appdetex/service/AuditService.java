@@ -20,16 +20,19 @@ public class AuditService {
     }
 
     public List<Audit> getByMarketplaceDetectionId(int marketplaceDetectionsId)  {
+
         return auditRepository.findByMarketplaceDetectionsId(marketplaceDetectionsId);
     }
 
     public Audit createAudit (CreateAuditRequest createAuditRequest){
+
         Audit audit = new Audit(createAuditRequest);
         audit = auditRepository.save(audit);
         return audit;
     }
 
     public Audit updateAudit(UpdateAuditRequest updateAuditRequest){
+
         Audit audit = auditRepository.findById(updateAuditRequest.getId()).get();
 
         if(updateAuditRequest.getAnalystsId() != 0){
@@ -50,6 +53,7 @@ public class AuditService {
     }
 
     public String deleteAudit(int id){
+
         auditRepository.deleteById(id);
         return "Audit has been deleted successfully";
     }

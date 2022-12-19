@@ -21,6 +21,7 @@ public class AccountController {
 
     @GetMapping("getAll")
     public List<AccountResponse> getAllAccounts() {
+
         List<Account> accountList = accountService.getAllAccounts();
         List<AccountResponse> accountResponseList = new ArrayList<AccountResponse>();
 
@@ -33,24 +34,26 @@ public class AccountController {
 
     @GetMapping("getAccountNameByDetectionId/{marketplaceDetectionsId}")
     public String getAccountNameByDetectionId(@PathVariable int marketplaceDetectionsId) throws IOException {
+
         return accountService.getAccountNameByDetectionId(marketplaceDetectionsId);
     }
 
     @GetMapping("getAccountName/{accountId}")
-    public String getAccountName(@PathVariable int accountId) {;
-        return accountService.getAccountNameById(accountId);
+    public String getAccountName(@PathVariable int accountId) {
+
+        return accountService.getAccountNameByAccountId(accountId);
     }
 
     @PostMapping("create")
     public AccountResponse createAccount(@RequestBody CreateAccountRequest createAccountRequest){
-        Account account = accountService.createAccount(createAccountRequest);
 
+        Account account = accountService.createAccount(createAccountRequest);
         return new AccountResponse(account);
     }
 
     @DeleteMapping("delete/{id}")
     public String deleteAccount(@PathVariable int id){
+
         return accountService.deleteAccount(id);
     }
-
 }

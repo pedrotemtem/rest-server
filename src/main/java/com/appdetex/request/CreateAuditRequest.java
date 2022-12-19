@@ -8,11 +8,7 @@ import lombok.Setter;
 public class CreateAuditRequest {
 
     private Integer analystsId;
-
     private Integer marketplaceDetectionsId;
-
     private String parameter;
-
     private String dateTime;
-
 }

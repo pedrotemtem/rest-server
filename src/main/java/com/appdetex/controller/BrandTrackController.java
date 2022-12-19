@@ -22,6 +22,7 @@ public class BrandTrackController {
 
     @GetMapping("getAll")
     public List<BrandTrackResponse> getAllBrandTracks() {
+
         List<BrandTrack> brandTrackList = brandTrackService.getAllBrandTracks();
         List<BrandTrackResponse> brandTrackResponseList = new ArrayList<BrandTrackResponse>();
 
@@ -34,6 +35,7 @@ public class BrandTrackController {
 
     @GetMapping("getByAccount/{accountId}")
     public List<BrandTrackResponse> getByAccountId(@PathVariable int accountId){
+
         List<BrandTrack> brandTrackList = brandTrackService.getByAccountId(accountId);
         List<BrandTrackResponse> brandTrackResponseList = new ArrayList<BrandTrackResponse>();
 
@@ -46,13 +48,14 @@ public class BrandTrackController {
 
     @PostMapping("create")
     public BrandTrackResponse createBrandTrack(@RequestBody CreateBrandTrackRequest createBrandTrackRequest){
-        BrandTrack brandTrack = brandTrackService.createBrandTrack(createBrandTrackRequest);
 
+        BrandTrack brandTrack = brandTrackService.createBrandTrack(createBrandTrackRequest);
         return new BrandTrackResponse(brandTrack);
     }
 
     @DeleteMapping("delete/{id}")
     public String deleteBrandTrack(@PathVariable int id){
+
         return brandTrackService.deleteBrandTrack(id);
     }
 }

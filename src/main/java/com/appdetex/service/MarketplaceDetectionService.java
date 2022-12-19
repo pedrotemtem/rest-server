@@ -125,6 +125,7 @@ public class MarketplaceDetectionService {
     }
 
     public String deleteMarketplaceDetection (int id) {
+
         marketplaceDetectionRepository.deleteById(id);
         return "Detection has been deleted successfully";
     }

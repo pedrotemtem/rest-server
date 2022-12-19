@@ -7,6 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class AuditResponse {
+
     private Integer id;
     private Integer analystsId;
     private Integer marketplaceDetectionsId;

@@ -22,6 +22,7 @@ public class AnalystController {
 
     @GetMapping("getAll")
     public List<AnalystResponse> getAllAnalysts() {
+
         List<Analyst> analystList = analystService.getAllAnalysts();
         List<AnalystResponse> analystResponseList = new ArrayList<AnalystResponse>();
 
@@ -33,21 +34,22 @@ public class AnalystController {
     }
 
     @PostMapping("create")
-    public AnalystResponse createAnalyst(@RequestBody CreateAnalystRequest createAnalystRequest){
-        Analyst analyst = analystService.createAnalyst(createAnalystRequest);
+    public AnalystResponse createAnalyst(@RequestBody CreateAnalystRequest createAnalystRequest) {
 
+        Analyst analyst = analystService.createAnalyst(createAnalystRequest);
         return new AnalystResponse(analyst);
     }
 
     @PutMapping("update")
-    public AnalystResponse updateAnalyst(@Valid @RequestBody UpdateAnalystRequest updateAnalystRequest){
-        Analyst analyst = analystService.updateAnalyst(updateAnalystRequest);
+    public AnalystResponse updateAnalyst(@Valid @RequestBody UpdateAnalystRequest updateAnalystRequest) {
 
+        Analyst analyst = analystService.updateAnalyst(updateAnalystRequest);
         return new AnalystResponse(analyst);
     }
 
     @DeleteMapping("delete/{id}")
     public String deleteAnalyst(@PathVariable int id){
+
         return analystService.deleteAnalyst(id);
     }
 }
