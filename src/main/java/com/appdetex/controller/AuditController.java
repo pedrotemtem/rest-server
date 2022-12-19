@@ -31,9 +31,9 @@ public class AuditController {
         return auditResponseList;
     }
 
-    @GetMapping("getByMarketplaceDetection/{marketplace_detections_id}")
-    public List<AuditResponse> getByMarketplaceDetectionId(@PathVariable int marketplace_detections_id){
-        List<Audit> auditList = auditService.getByMarketplaceDetectionId(marketplace_detections_id);
+    @GetMapping("getByMarketplaceDetection/{marketplaceDetectionsId}")
+    public List<AuditResponse> getByMarketplaceDetectionId(@PathVariable int marketplaceDetectionsId){
+        List<Audit> auditList = auditService.getByMarketplaceDetectionId(marketplaceDetectionsId);
         List<AuditResponse> auditResponseList = new ArrayList<AuditResponse>();
 
         auditList.stream().forEach(audit -> {

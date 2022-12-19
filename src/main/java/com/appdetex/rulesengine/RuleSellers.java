@@ -14,12 +14,12 @@ public class RuleSellers extends RulesAbstract implements RulesInterface{
         if(marketplaceDetection.getAccountId()==2
                 && marketplaceDetection.getSeller().equals("Apple")){
             marketplaceDetection.setState("benign");
-            marketplaceDetection.setReason_code("fair-use");
+            marketplaceDetection.setReasonCode("fair-use");
         }
         else if (marketplaceDetection.getAccountId()==3
                 && marketplaceDetection.getSeller().equals("Microsoft")){
             marketplaceDetection.setState("benign");
-            marketplaceDetection.setReason_code("fair-use");
+            marketplaceDetection.setReasonCode("fair-use");
 
         }
 

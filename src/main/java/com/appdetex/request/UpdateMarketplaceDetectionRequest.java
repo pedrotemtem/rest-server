@@ -12,9 +12,9 @@ public class UpdateMarketplaceDetectionRequest {
     @Positive(message = "Detection ID is required")
     private Integer id;
 
-    private Integer order_on_page;
+    private Integer orderOnPage;
 
-    private String capture_date;
+    private String captureDate;
 
     private String title;
 
@@ -22,11 +22,11 @@ public class UpdateMarketplaceDetectionRequest {
 
     private String url;
 
-    private String image_url;
+    private String imageUrl;
 
     private String price;
 
-    private String paid_search;
+    private String paidSearch;
 
     private String seller;
 
@@ -36,10 +36,10 @@ public class UpdateMarketplaceDetectionRequest {
 
     private String state;
 
-    private String reason_code;
+    private String reasonCode;
 
     private Integer analystId;
 
-    private Integer account_id;
+    private Integer accountId;
 
 }

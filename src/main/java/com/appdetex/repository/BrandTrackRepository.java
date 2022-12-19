@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface BrandTrackRepository extends JpaRepository<BrandTrack, Integer> {
 
-    List<BrandTrack> findByAccountId(int account_id);
+    List<BrandTrack> findByAccountId(int accountId);
 }

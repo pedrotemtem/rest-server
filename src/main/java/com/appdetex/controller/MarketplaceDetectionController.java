@@ -45,9 +45,9 @@ public class MarketplaceDetectionController {
 
     }
 
-    @GetMapping("getByAccount/{account_id}")
-    public List<MarketplaceDetectionResponse> getByAccountId(@PathVariable int account_id){
-        List<MarketplaceDetection> marketplaceDetectionList = marketplaceDetectionService.getByAccountId(account_id);
+    @GetMapping("getByAccount/{accountId}")
+    public List<MarketplaceDetectionResponse> getByAccountId(@PathVariable int accountId){
+        List<MarketplaceDetection> marketplaceDetectionList = marketplaceDetectionService.getByAccountId(accountId);
         List<MarketplaceDetectionResponse> marketplaceDetectionResponseList = new ArrayList<MarketplaceDetectionResponse>();
 
         marketplaceDetectionList.stream().forEach(marketplaceDetection -> {

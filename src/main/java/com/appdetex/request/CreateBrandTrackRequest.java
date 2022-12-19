@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 public class CreateBrandTrackRequest {
 
-    private String search_term;
+    private String searchTerm;
 
-    private Integer account_id;
+    private Integer accountId;
 }

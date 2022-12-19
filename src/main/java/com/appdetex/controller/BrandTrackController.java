@@ -32,9 +32,9 @@ public class BrandTrackController {
         return brandTrackResponseList;
     }
 
-    @GetMapping("getByAccount/{account_id}")
-    public List<BrandTrackResponse> getByAccountId(@PathVariable int account_id){
-        List<BrandTrack> brandTrackList = brandTrackService.getByAccountId(account_id);
+    @GetMapping("getByAccount/{accountId}")
+    public List<BrandTrackResponse> getByAccountId(@PathVariable int accountId){
+        List<BrandTrack> brandTrackList = brandTrackService.getByAccountId(accountId);
         List<BrandTrackResponse> brandTrackResponseList = new ArrayList<BrandTrackResponse>();
 
         brandTrackList.stream().forEach(brandTrack -> {

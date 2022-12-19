@@ -19,10 +19,10 @@ public class MarketplaceDetection {
     private Integer id;
 
     @Column(name = "order_on_page")
-    private Integer order_on_page;
+    private Integer orderOnPage;
 
     @Column(name = "capture_date")
-    private String capture_date;
+    private String captureDate;
 
     @Column(name = "title")
     private String title;
@@ -34,13 +34,13 @@ public class MarketplaceDetection {
     private String url;
 
     @Column(name = "image_url")
-    private String image_url;
+    private String imageUrl;
 
     @Column(name = "price")
     private String price;
 
     @Column(name = "paid_search")
-    private String paid_search;
+    private String paidSearch;
 
     @Column(name = "seller")
     private String seller;
@@ -55,26 +55,26 @@ public class MarketplaceDetection {
     private String state;
 
     @Column(name = "reason_code")
-    private String reason_code;
+    private String reasonCode;
 
     @Column(name = "account_id")
     private Integer accountId;
 
     public MarketplaceDetection(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
         this.id = createMarketplaceDetectionRequest.getId();
-        this.order_on_page = createMarketplaceDetectionRequest.getOrder_on_page();
-        this.capture_date = createMarketplaceDetectionRequest.getCapture_date();
+        this.orderOnPage = createMarketplaceDetectionRequest.getOrderOnPage();
+        this.captureDate = createMarketplaceDetectionRequest.getCaptureDate();
         this.title = createMarketplaceDetectionRequest.getTitle();
         this.description = createMarketplaceDetectionRequest.getDescription();
         this.url = createMarketplaceDetectionRequest.getUrl();
-        this.image_url = createMarketplaceDetectionRequest.getImage_url();
+        this.imageUrl = createMarketplaceDetectionRequest.getImageUrl();
         this.price = createMarketplaceDetectionRequest.getPrice();
-        this.paid_search = createMarketplaceDetectionRequest.getPaid_search();
+        this.paidSearch = createMarketplaceDetectionRequest.getPaidSearch();
         this.seller = createMarketplaceDetectionRequest.getSeller();
         this.marketplace = createMarketplaceDetectionRequest.getMarketplace();
         this.status = createMarketplaceDetectionRequest.getStatus();
         this.state = createMarketplaceDetectionRequest.getState();
-        this.reason_code = createMarketplaceDetectionRequest.getReason_code();
-        this.accountId = createMarketplaceDetectionRequest.getAccount_id();
+        this.reasonCode = createMarketplaceDetectionRequest.getReasonCode();
+        this.accountId = createMarketplaceDetectionRequest.getAccountId();
     }
 }

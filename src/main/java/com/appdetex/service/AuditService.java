@@ -19,8 +19,8 @@ public class AuditService {
         return auditRepository.findAll();
     }
 
-    public List<Audit> getByMarketplaceDetectionId(int marketplace_detections_id)  {
-        return auditRepository.findByMarketplaceDetectionsId(marketplace_detections_id);
+    public List<Audit> getByMarketplaceDetectionId(int marketplaceDetectionsId)  {
+        return auditRepository.findByMarketplaceDetectionsId(marketplaceDetectionsId);
     }
 
     public Audit createAudit (CreateAuditRequest createAuditRequest){
@@ -32,17 +32,17 @@ public class AuditService {
     public Audit updateAudit(UpdateAuditRequest updateAuditRequest){
         Audit audit = auditRepository.findById(updateAuditRequest.getId()).get();
 
-        if(updateAuditRequest.getAnalysts_id() != 0){
-            audit.setAnalysts_id(updateAuditRequest.getAnalysts_id());
+        if(updateAuditRequest.getAnalystsId() != 0){
+            audit.setAnalystsId(updateAuditRequest.getAnalystsId());
         }
-        if(updateAuditRequest.getMarketplace_detections_id() != 0){
-            audit.setMarketplaceDetectionsId(updateAuditRequest.getMarketplace_detections_id());
+        if(updateAuditRequest.getMarketplaceDetectionsId() != 0){
+            audit.setMarketplaceDetectionsId(updateAuditRequest.getMarketplaceDetectionsId());
         }
         if(updateAuditRequest.getParameter() != null && !updateAuditRequest.getParameter().isEmpty()){
             audit.setParameter(updateAuditRequest.getParameter());
         }
-        if(updateAuditRequest.getDate_time() != null && !updateAuditRequest.getDate_time().isEmpty()){
-            audit.setDate_time(updateAuditRequest.getDate_time());
+        if(updateAuditRequest.getDateTime() != null && !updateAuditRequest.getDateTime().isEmpty()){
+            audit.setDateTime(updateAuditRequest.getDateTime());
         }
 
         audit = auditRepository.save(audit);

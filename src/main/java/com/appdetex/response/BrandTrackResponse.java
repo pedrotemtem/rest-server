@@ -10,13 +10,13 @@ public class BrandTrackResponse {
 
     private Integer id;
 
-    private String search_term;
+    private String searchTerm;
 
     private Integer accountId;
 
     public BrandTrackResponse (BrandTrack brandTrack) {
         this.id = brandTrack.getId();
-        this.search_term = brandTrack.getSearch_term();
+        this.searchTerm = brandTrack.getSearchTerm();
         this.accountId = brandTrack.getAccountId();
     }
 }

@@ -32,11 +32,11 @@ public class AccountService {
     @Autowired
     AccountRepository accountRepository;
 
-    public String getAccountNameByDetectionId(int detection_id) throws IOException {
+    public String getAccountNameByDetectionId(int marketplaceDetectionsId) throws IOException {
 
-        // gets the detection with id detection_id
+        // gets the detection with id marketplaceDetectionsId
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        HttpGet request = new HttpGet("http://localhost:8008/api/marketplacedetections/getById/"+ detection_id);
+        HttpGet request = new HttpGet("http://localhost:8008/api/marketplacedetections/getById/"+ marketplaceDetectionsId);
         CloseableHttpResponse response = httpClient.execute(request);
         HttpEntity entity = response.getEntity();
         String responseDetection = EntityUtils.toString(entity);
@@ -62,9 +62,9 @@ public class AccountService {
         return accountRepository.findAll();
     }
 
-    public String getAccountNameById(int account_id) {
+    public String getAccountNameById(int accountId) {
 
-        Account account = accountRepository.findById(account_id);
+        Account account = accountRepository.findById(accountId);
 
         String accountName = account.getName();
 

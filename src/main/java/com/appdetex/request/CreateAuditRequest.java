@@ -7,12 +7,12 @@ import lombok.Setter;
 @Getter
 public class CreateAuditRequest {
 
-    private Integer analysts_id;
+    private Integer analystsId;
 
-    private Integer marketplace_detections_id;
+    private Integer marketplaceDetectionsId;
 
     private String parameter;
 
-    private String date_time;
+    private String dateTime;
 
 }

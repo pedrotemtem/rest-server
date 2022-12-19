@@ -31,14 +31,14 @@ public class AccountController {
         return accountResponseList;
     }
 
-    @GetMapping("getAccountNameByDetectionId/{detection_id}")
-    public String getAccountNameByDetectionId(@PathVariable int detection_id) throws IOException {
-        return accountService.getAccountNameByDetectionId(detection_id);
+    @GetMapping("getAccountNameByDetectionId/{marketplaceDetectionsId}")
+    public String getAccountNameByDetectionId(@PathVariable int marketplaceDetectionsId) throws IOException {
+        return accountService.getAccountNameByDetectionId(marketplaceDetectionsId);
     }
 
-    @GetMapping("getAccountName/{account_id}")
-    public String getAccountName(@PathVariable int account_id) {;
-        return accountService.getAccountNameById(account_id);
+    @GetMapping("getAccountName/{accountId}")
+    public String getAccountName(@PathVariable int accountId) {;
+        return accountService.getAccountNameById(accountId);
     }
 
     @PostMapping("create")

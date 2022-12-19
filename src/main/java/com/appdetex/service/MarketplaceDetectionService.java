@@ -38,9 +38,9 @@ public class MarketplaceDetectionService {
         return marketplaceDetectionRepository.findById(id);
     }
 
-    public List<MarketplaceDetection> getByAccountId(int account_id)  {
+    public List<MarketplaceDetection> getByAccountId(int accountId)  {
 
-        return marketplaceDetectionRepository.findByAccountId(account_id);
+        return marketplaceDetectionRepository.findByAccountId(accountId);
     }
 
     public MarketplaceDetection createMarketplaceDetection(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
@@ -78,8 +78,8 @@ public class MarketplaceDetectionService {
             postAudit(updateMarketplaceDetectionRequest, parameter);
         }
 
-        if (updateMarketplaceDetectionRequest.getReason_code() != null && !updateMarketplaceDetectionRequest.getReason_code().isEmpty()) {
-            marketplaceDetection.setReason_code(updateMarketplaceDetectionRequest.getReason_code());
+        if (updateMarketplaceDetectionRequest.getReasonCode() != null && !updateMarketplaceDetectionRequest.getReasonCode().isEmpty()) {
+            marketplaceDetection.setReasonCode(updateMarketplaceDetectionRequest.getReasonCode());
         }
 
         marketplaceDetection = marketplaceDetectionRepository.save(marketplaceDetection);

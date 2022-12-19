@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface AuditRepository extends JpaRepository<Audit, Integer> {
 
-    List<Audit> findByMarketplaceDetectionsId(int marketplace_detections_id);
+    List<Audit> findByMarketplaceDetectionsId(int marketplaceDetectionsId);
 }
 

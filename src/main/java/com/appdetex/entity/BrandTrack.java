@@ -20,13 +20,13 @@ public class BrandTrack {
     private Integer id;
 
     @Column(name = "search_term")
-    private String search_term;
+    private String searchTerm;
 
     @Column(name = "account_id")
     private Integer accountId;
 
     public BrandTrack(CreateBrandTrackRequest createBrandTrackRequest) {
-        this.search_term = createBrandTrackRequest.getSearch_term();
-        this.accountId = createBrandTrackRequest.getAccount_id();
+        this.searchTerm = createBrandTrackRequest.getSearchTerm();
+        this.accountId = createBrandTrackRequest.getAccountId();
     }
 }

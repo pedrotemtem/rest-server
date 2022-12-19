@@ -8,15 +8,15 @@ import lombok.Setter;
 @Setter
 public class AuditResponse {
     private Integer id;
-    private Integer analysts_id;
+    private Integer analystsId;
     private Integer marketplaceDetectionsId;
     private String parameter;
-    private String date_time;
+    private String dateTime;
     public AuditResponse (Audit audit) {
         this.id = audit.getId();
-        this.analysts_id = audit.getAnalysts_id();
+        this.analystsId = audit.getAnalystsId();
         this.marketplaceDetectionsId = audit.getMarketplaceDetectionsId();
         this.parameter = audit.getParameter();
-        this.date_time = audit.getDate_time();
+        this.dateTime = audit.getDateTime();
     }
 }

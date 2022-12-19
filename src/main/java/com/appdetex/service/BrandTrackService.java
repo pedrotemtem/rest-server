@@ -19,9 +19,9 @@ public class BrandTrackService {
         return brandTrackRepository.findAll();
     }
 
-    public List<BrandTrack> getByAccountId(int account_id)  {
+    public List<BrandTrack> getByAccountId(int accountId)  {
 
-        return brandTrackRepository.findByAccountId(account_id);
+        return brandTrackRepository.findByAccountId(accountId);
     }
 
     public BrandTrack createBrandTrack(CreateBrandTrackRequest createBrandTrackRequest) {

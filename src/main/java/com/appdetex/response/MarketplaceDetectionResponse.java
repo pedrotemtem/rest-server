@@ -10,9 +10,9 @@ public class MarketplaceDetectionResponse {
 
     private Integer id;
 
-    private Integer order_on_page;
+    private Integer orderOnPage;
 
-    private String capture_date;
+    private String captureDate;
 
     private String title;
 
@@ -20,11 +20,11 @@ public class MarketplaceDetectionResponse {
 
     private String url;
 
-    private String image_url;
+    private String imageUrl;
 
     private String price;
 
-    private String paid_search;
+    private String paidSearch;
 
     private String seller;
 
@@ -34,25 +34,25 @@ public class MarketplaceDetectionResponse {
 
     private String state;
 
-    private String reason_code;
+    private String reasonCode;
 
     private Integer accountId;
 
     public MarketplaceDetectionResponse(MarketplaceDetection marketplaceDetection) {
         this.id = marketplaceDetection.getId();
-        this.order_on_page = marketplaceDetection.getOrder_on_page();
-        this.capture_date = marketplaceDetection.getCapture_date();
+        this.orderOnPage = marketplaceDetection.getOrderOnPage();
+        this.captureDate = marketplaceDetection.getCaptureDate();
         this.title = marketplaceDetection.getTitle();
         this.description = marketplaceDetection.getDescription();
         this.url = marketplaceDetection.getUrl();
-        this.image_url = marketplaceDetection.getImage_url();
+        this.imageUrl = marketplaceDetection.getImageUrl();
         this.price = marketplaceDetection.getPrice();
-        this.paid_search = marketplaceDetection.getPaid_search();
+        this.paidSearch = marketplaceDetection.getPaidSearch();
         this.seller = marketplaceDetection.getSeller();
         this.marketplace = marketplaceDetection.getMarketplace();
         this.status = marketplaceDetection.getStatus();
         this.state = marketplaceDetection.getState();
-        this.reason_code = marketplaceDetection.getReason_code();
+        this.reasonCode = marketplaceDetection.getReasonCode();
         this.accountId = marketplaceDetection.getAccountId();
     }
 }
