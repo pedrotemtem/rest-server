@@ -31,10 +31,18 @@ public class Audit {
     @Column(name = "date_time")
     private String dateTime;
 
+    @Column(name = "old_value")
+    private String oldValue;
+
+    @Column(name = "new_value")
+    private String newValue;
+
     public Audit(CreateAuditRequest createAuditRequest){
         this.analystsId = createAuditRequest.getAnalystsId();
         this.marketplaceDetectionsId = createAuditRequest.getMarketplaceDetectionsId();
         this.parameter = createAuditRequest.getParameter();
         this.dateTime = createAuditRequest.getDateTime();
+        this.oldValue = createAuditRequest.getOldValue();
+        this.newValue = createAuditRequest.getNewValue();
     }
 }

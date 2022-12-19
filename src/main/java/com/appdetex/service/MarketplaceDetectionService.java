@@ -67,15 +67,19 @@ public class MarketplaceDetectionService {
         String parameter;
 
         if (updateMarketplaceDetectionRequest.getState() != null && !updateMarketplaceDetectionRequest.getState().isEmpty()) {
+            String oldValue = marketplaceDetection.getState();
             marketplaceDetection.setState(updateMarketplaceDetectionRequest.getState());
+            String newValue = marketplaceDetection.getState();
             parameter = "state";
-            postAudit(updateMarketplaceDetectionRequest, parameter);
+            postAudit(updateMarketplaceDetectionRequest, parameter, oldValue, newValue);
         }
 
         if (updateMarketplaceDetectionRequest.getStatus() != null && !updateMarketplaceDetectionRequest.getStatus().isEmpty()) {
+            String oldValue = marketplaceDetection.getStatus();
             marketplaceDetection.setStatus(updateMarketplaceDetectionRequest.getStatus());
+            String newValue = marketplaceDetection.getStatus();
             parameter = "status";
-            postAudit(updateMarketplaceDetectionRequest, parameter);
+            postAudit(updateMarketplaceDetectionRequest, parameter, oldValue, newValue);
         }
 
         if (updateMarketplaceDetectionRequest.getReasonCode() != null && !updateMarketplaceDetectionRequest.getReasonCode().isEmpty()) {
@@ -86,15 +90,20 @@ public class MarketplaceDetectionService {
         return marketplaceDetection;
     }
 
-    private static void postAudit(UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest, String parameter) {
+    private static void postAudit(UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest,
+                                  String parameter, String oldValue, String newValue) {
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-        int analystId = updateMarketplaceDetectionRequest.getAnalystId();
 
         if (parameter.equals("state")) {
             try (CloseableHttpClient client = HttpClients.createDefault()) {
                 HttpPost httpPost = new HttpPost("http://localhost:8008/api/audit/create");
-                String json = "{ \"analysts_id\" : \""+ analystId +"\",\"marketplace_detections_id\" : \"" + updateMarketplaceDetectionRequest.getId() + "\",\"parameter\" : \"state\",\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
+                String json = "{ \"analystsId\" : \"" + updateMarketplaceDetectionRequest.getAnalystId()
+                        + "\",\"marketplaceDetectionsId\" : \"" + updateMarketplaceDetectionRequest.getId()
+                        + "\",\"parameter\" : \"" + parameter
+                        + "\",\"dateTime\" : \"" + dtf.format(LocalDateTime.now())
+                        + "\",\"oldValue\" : \"" + oldValue
+                        + "\",\"newValue\" : \"" + newValue + "\"}";
                 StringEntity entity = new StringEntity(json, "UTF-8");
                 httpPost.setEntity(entity);
                 httpPost.setHeader("Accept", "application/json");
@@ -109,7 +118,12 @@ public class MarketplaceDetectionService {
         } else if (parameter.equals("status")) {
             try (CloseableHttpClient client = HttpClients.createDefault()) {
                 HttpPost httpPost = new HttpPost("http://localhost:8008/api/audit/create");
-                String json = "{ \"analysts_id\" : \"" + analystId + "\",\"marketplace_detections_id\" : \"" + updateMarketplaceDetectionRequest.getId() + "\",\"parameter\" : \"status\",\"date_time\" : \"" + dtf.format(LocalDateTime.now()) + "\"}";
+                String json = "{ \"analystsId\" : \"" + updateMarketplaceDetectionRequest.getAnalystId()
+                        + "\",\"marketplaceDetectionsId\" : \"" + updateMarketplaceDetectionRequest.getId()
+                        + "\",\"parameter\" : \"" + parameter
+                        + "\",\"dateTime\" : \"" + dtf.format(LocalDateTime.now())
+                        + "\",\"oldValue\" : \"" + oldValue
+                        + "\",\"newValue\" : \"" + newValue + "\"}";
                 StringEntity entity = new StringEntity(json, "UTF-8");
                 httpPost.setEntity(entity);
                 httpPost.setHeader("Accept", "application/json");

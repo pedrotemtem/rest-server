@@ -1,5 +1,6 @@
 package com.appdetex.service;
 
+import com.appdetex.entity.MarketplaceDetection;
 import com.appdetex.repository.AuditRepository;
 import com.appdetex.request.CreateAuditRequest;
 import com.appdetex.entity.Audit;
@@ -31,7 +32,7 @@ public class AuditService {
         return audit;
     }
 
-    public Audit updateAudit(UpdateAuditRequest updateAuditRequest){
+    public Audit updateAudit(UpdateAuditRequest updateAuditRequest) {
 
         Audit audit = auditRepository.findById(updateAuditRequest.getId()).get();
 
@@ -43,6 +44,12 @@ public class AuditService {
         }
         if(updateAuditRequest.getParameter() != null && !updateAuditRequest.getParameter().isEmpty()){
             audit.setParameter(updateAuditRequest.getParameter());
+        }
+        if(updateAuditRequest.getOldValue() != null && !updateAuditRequest.getOldValue().isEmpty()){
+            audit.setOldValue(updateAuditRequest.getOldValue());
+        }
+        if(updateAuditRequest.getNewValue() != null && !updateAuditRequest.getNewValue().isEmpty()){
+            audit.setNewValue(updateAuditRequest.getNewValue());
         }
         if(updateAuditRequest.getDateTime() != null && !updateAuditRequest.getDateTime().isEmpty()){
             audit.setDateTime(updateAuditRequest.getDateTime());

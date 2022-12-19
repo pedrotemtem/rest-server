@@ -15,4 +15,6 @@ public class UpdateAuditRequest {
     private Integer marketplaceDetectionsId;
     private String parameter;
     private String dateTime;
+    private String oldValue;
+    private String newValue;
 }
