@@ -60,6 +60,9 @@ public class MarketplaceDetection {
     @Column(name = "account_id")
     private Integer accountId;
 
+    @Column(name = "search_term")
+    private String searchTerm;
+
     public MarketplaceDetection(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
         this.id = createMarketplaceDetectionRequest.getId();
         this.orderOnPage = createMarketplaceDetectionRequest.getOrderOnPage();
@@ -76,5 +79,6 @@ public class MarketplaceDetection {
         this.state = createMarketplaceDetectionRequest.getState();
         this.reasonCode = createMarketplaceDetectionRequest.getReasonCode();
         this.accountId = createMarketplaceDetectionRequest.getAccountId();
+        this.searchTerm = createMarketplaceDetectionRequest.getSearchTerm();
     }
 }

@@ -42,4 +42,6 @@ public class UpdateMarketplaceDetectionRequest {
 
     private Integer accountId;
 
+    private String searchTerm;
+
 }

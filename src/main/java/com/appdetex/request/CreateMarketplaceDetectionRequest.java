@@ -37,4 +37,6 @@ public class CreateMarketplaceDetectionRequest {
 
     private Integer accountId;
 
+    private String searchTerm;
+
 }

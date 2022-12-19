@@ -38,6 +38,8 @@ public class MarketplaceDetectionResponse {
 
     private Integer accountId;
 
+    private String searchTerm;
+
     public MarketplaceDetectionResponse(MarketplaceDetection marketplaceDetection) {
         this.id = marketplaceDetection.getId();
         this.orderOnPage = marketplaceDetection.getOrderOnPage();
@@ -54,5 +56,6 @@ public class MarketplaceDetectionResponse {
         this.state = marketplaceDetection.getState();
         this.reasonCode = marketplaceDetection.getReasonCode();
         this.accountId = marketplaceDetection.getAccountId();
+        this.searchTerm = marketplaceDetection.getSearchTerm();
     }
 }
