@@ -31,6 +31,12 @@ public class RoleController {
         return roleResponseList;
     }
 
+    @GetMapping("getRoleName/{roleID}")
+    public String getRoleName(@PathVariable int roleID){
+
+        return roleService.getRoleName(roleID);
+    }
+
     @PostMapping("create")
     public RoleResponse createRole(@RequestBody CreateRoleRequest createRoleRequest){
 
