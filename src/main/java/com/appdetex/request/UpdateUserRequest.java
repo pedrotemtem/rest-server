@@ -7,11 +7,12 @@ import javax.validation.constraints.Positive;
 
 @Getter
 @Setter
-public class UpdateAnalystRequest {
+public class UpdateUserRequest {
 
-    @Positive (message = "Analyst ID is required")
+    @Positive (message = "User ID is required")
     private Integer id;
     private String name;
     private String email;
     private String password;
+    private Integer rolesId;
 }

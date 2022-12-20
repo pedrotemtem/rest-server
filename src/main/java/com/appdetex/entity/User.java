@@ -1,6 +1,6 @@
 package com.appdetex.entity;
 
-import com.appdetex.request.CreateAnalystRequest;
+import com.appdetex.request.CreateUserRequest;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,8 +11,8 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "analysts")
-public class Analyst {
+@Table(name = "users")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,10 +28,14 @@ public class Analyst {
     @Column(name = "password")
     private String password;
 
-    public Analyst(CreateAnalystRequest createAnalystRequest){
-        this.id = createAnalystRequest.getId();
-        this.name = createAnalystRequest.getName();
-        this.email = createAnalystRequest.getEmail();
-        this.password = createAnalystRequest.getPassword();
+    @Column(name = "roles_id")
+    private Integer rolesId;
+
+    public User(CreateUserRequest createUserRequest){
+        this.id = createUserRequest.getId();
+        this.name = createUserRequest.getName();
+        this.email = createUserRequest.getEmail();
+        this.password = createUserRequest.getPassword();
+        this.rolesId = createUserRequest.getRolesId();
     }
 }

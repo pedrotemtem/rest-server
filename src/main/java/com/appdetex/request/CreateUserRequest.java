@@ -5,10 +5,11 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class CreateAnalystRequest {
+public class CreateUserRequest {
 
     private Integer id;
     private String name;
     private String email;
     private String password;
+    private Integer rolesId;
 }
