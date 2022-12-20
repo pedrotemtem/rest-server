@@ -12,7 +12,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "account")
-
 public class Account {
 
     @Id

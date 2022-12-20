@@ -70,5 +70,4 @@ public class AccountService {
         accountRepository.deleteById(id);
         return "Account has been deleted successfully";
     }
-
 }
