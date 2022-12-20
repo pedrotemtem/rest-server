@@ -25,9 +25,9 @@ public class RoleService {
         return role;
     }
 
-    public String getRoleName(int roleID) {
+    public String getRoleName(int roleId) {
 
-        Role role = roleRepository.findById(roleID);
+        Role role = roleRepository.findById(roleId);
 
         return role.getRole();
     }

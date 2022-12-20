@@ -39,8 +39,8 @@ public class UserService {
         if(updateUserRequest.getPassword() != null && !updateUserRequest.getPassword().isEmpty()){
             user.setPassword(updateUserRequest.getPassword());
         }
-        if(updateUserRequest.getRolesId() != 0){
-            user.setRoleId(updateUserRequest.getRolesId());
+        if(updateUserRequest.getRoleId() != 0){
+            user.setRoleId(updateUserRequest.getRoleId());
         }
 
         user = userRepository.save(user);

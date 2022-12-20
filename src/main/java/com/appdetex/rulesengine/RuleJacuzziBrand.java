@@ -1,6 +1,6 @@
 package com.appdetex.rulesengine;
 
-import com.appdetex.entity.MarketplaceDetection;
+import com.appdetex.entity.Detection;
 
 public class RuleJacuzziBrand extends RulesAbstract implements RulesInterface{
 
@@ -8,16 +8,16 @@ public class RuleJacuzziBrand extends RulesAbstract implements RulesInterface{
     }
 
     @Override
-    public MarketplaceDetection rulesChecker(MarketplaceDetection marketplaceDetection) {
+    public Detection rulesChecker(Detection detection) {
 
-        if (marketplaceDetection.getAccountId() == 1) {
-            if (marketplaceDetection.getDescription().contains("Jacuzzi® Brand")) {
-                marketplaceDetection.setState("benign");
-                marketplaceDetection.setReasonCode("fair-use");
+        if (detection.getAccountId() == 1) {
+            if (detection.getDescription().contains("Jacuzzi® Brand")) {
+                detection.setState("benign");
+                detection.setReasonCode("fair-use");
             }
         }
 
-        return marketplaceDetection;
+        return detection;
     }
 }
 

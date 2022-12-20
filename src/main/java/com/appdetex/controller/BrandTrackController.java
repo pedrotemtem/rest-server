@@ -1,9 +1,7 @@
 package com.appdetex.controller;
 
-import com.appdetex.entity.MarketplaceDetection;
 import com.appdetex.request.CreateBrandTrackRequest;
 import com.appdetex.response.BrandTrackResponse;
-import com.appdetex.response.MarketplaceDetectionResponse;
 import com.appdetex.service.BrandTrackService;
 import com.appdetex.entity.BrandTrack;
 import org.springframework.beans.factory.annotation.Autowired;

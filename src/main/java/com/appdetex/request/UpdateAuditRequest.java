@@ -9,10 +9,10 @@ import javax.validation.constraints.Positive;
 @Setter
 public class UpdateAuditRequest {
 
-    @Positive(message="Audit ID is required")
+    @Positive(message = "Audit ID is required")
     private Integer id;
-    private Integer analystsId;
-    private Integer marketplaceDetectionsId;
+    private Integer analystId;
+    private Integer detectionId;
     private String parameter;
     private String dateTime;
     private String oldValue;

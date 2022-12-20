@@ -1,6 +1,6 @@
 package com.appdetex.service;
 
-import com.appdetex.entity.MarketplaceDetection;
+import com.appdetex.entity.Detection;
 import com.appdetex.repository.AccountRepository;
 import com.appdetex.entity.Account;
 import com.appdetex.request.CreateAccountRequest;
@@ -25,17 +25,17 @@ public class AccountService {
     @Autowired
     AccountRepository accountRepository;
 
-    public String getAccountNameByDetectionId(int marketplaceDetectionsId) throws IOException {
+    public String getAccountNameByDetectionId(int detectionId) throws IOException {
 
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        HttpGet request = new HttpGet("http://localhost:8008/api/marketplacedetections/getById/"+ marketplaceDetectionsId);
+        HttpGet request = new HttpGet("http://localhost:8008/api/marketplacedetections/getById/"+ detectionId);
         CloseableHttpResponse response = httpClient.execute(request);
         HttpEntity entity = response.getEntity();
         String responseDetection = EntityUtils.toString(entity);
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        MarketplaceDetection detection = mapper.readValue(responseDetection, MarketplaceDetection.class);
+        Detection detection = mapper.readValue(responseDetection, Detection.class);
 
         request = new HttpGet("http://localhost:8008/api/account/getAccountName/"+ detection.getAccountId());
         response = httpClient.execute(request);

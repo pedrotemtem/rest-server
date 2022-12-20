@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api/role/")
+@RequestMapping("/api/roles/")
 public class RoleController {
 
     @Autowired
@@ -31,10 +31,10 @@ public class RoleController {
         return roleResponseList;
     }
 
-    @GetMapping("getRoleName/{roleID}")
-    public String getRoleName(@PathVariable int roleID){
+    @GetMapping("getRoleName/{roleId}")
+    public String getRoleName(@PathVariable int roleId){
 
-        return roleService.getRoleName(roleID);
+        return roleService.getRoleName(roleId);
     }
 
     @PostMapping("create")

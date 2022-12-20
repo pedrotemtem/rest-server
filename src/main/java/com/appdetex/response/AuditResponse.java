@@ -9,16 +9,16 @@ import lombok.Setter;
 public class AuditResponse {
 
     private Integer id;
-    private Integer analystsId;
-    private Integer marketplaceDetectionsId;
+    private Integer analystId;
+    private Integer detectionId;
     private String parameter;
     private String dateTime;
     private String oldValue;
     private String newValue;
     public AuditResponse (Audit audit) {
         this.id = audit.getId();
-        this.analystsId = audit.getAnalystsId();
-        this.marketplaceDetectionsId = audit.getMarketplaceDetectionsId();
+        this.analystId = audit.getAnalystId();
+        this.detectionId = audit.getDetectionId();
         this.parameter = audit.getParameter();
         this.dateTime = audit.getDateTime();
         this.oldValue = audit.getOldValue();

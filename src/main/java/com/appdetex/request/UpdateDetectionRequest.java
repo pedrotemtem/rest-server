@@ -3,10 +3,13 @@ package com.appdetex.request;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
-@Getter
-public class CreateMarketplaceDetectionRequest {
+import javax.validation.constraints.Positive;
 
+@Getter
+@Setter
+public class UpdateDetectionRequest {
+
+    @Positive(message = "Detection ID is required")
     private Integer id;
     private Integer orderOnPage;
     private String captureDate;
@@ -18,9 +21,10 @@ public class CreateMarketplaceDetectionRequest {
     private String paidSearch;
     private String seller;
     private String marketplace;
-    private String state;
     private String status;
+    private String state;
     private String reasonCode;
+    private Integer userId;
     private Integer accountId;
     private String searchTerm;
 }
