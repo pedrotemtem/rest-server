@@ -29,13 +29,13 @@ public class User {
     private String password;
 
     @Column(name = "roles_id")
-    private Integer rolesId;
+    private Integer roleId;
 
     public User(CreateUserRequest createUserRequest){
         this.id = createUserRequest.getId();
         this.name = createUserRequest.getName();
         this.email = createUserRequest.getEmail();
         this.password = createUserRequest.getPassword();
-        this.rolesId = createUserRequest.getRolesId();
+        this.roleId = createUserRequest.getRoleId();
     }
 }

@@ -40,7 +40,7 @@ public class UserService {
             user.setPassword(updateUserRequest.getPassword());
         }
         if(updateUserRequest.getRolesId() != 0){
-            user.setRolesId(updateUserRequest.getRolesId());
+            user.setRoleId(updateUserRequest.getRolesId());
         }
 
         user = userRepository.save(user);

@@ -12,12 +12,12 @@ public class UserResponse {
     private String name;
     private String email;
     private String password;
-    private Integer rolesId;
+    private Integer roleId;
     public UserResponse(User user) {
         this.id = user.getId();
         this.name = user.getName();
         this.email = user.getEmail();
         this.password = user.getPassword();
-        this.rolesId = user.getRolesId();
+        this.roleId = user.getRoleId();
     }
 }
