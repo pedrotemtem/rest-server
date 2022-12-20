@@ -9,6 +9,7 @@ public class RuleJacuzziBrand extends RulesAbstract implements RulesInterface{
 
     @Override
     public MarketplaceDetection rulesChecker(MarketplaceDetection marketplaceDetection) {
+
         if (marketplaceDetection.getAccountId() == 1) {
             if (marketplaceDetection.getDescription().contains("Jacuzzi® Brand")) {
                 marketplaceDetection.setState("benign");

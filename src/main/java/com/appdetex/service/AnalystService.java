@@ -20,12 +20,14 @@ public class AnalystService {
     }
 
     public Analyst createAnalyst (CreateAnalystRequest createAnalystRequest){
+
         Analyst analyst = new Analyst(createAnalystRequest);
         analyst = analystRepository.save(analyst);
         return analyst;
     }
 
     public Analyst updateAnalyst (UpdateAnalystRequest updateAnalystRequest){
+
         Analyst analyst = analystRepository.findById(updateAnalystRequest.getId()).get();
 
         if(updateAnalystRequest.getName() != null && !updateAnalystRequest.getName().isEmpty()){
@@ -43,6 +45,7 @@ public class AnalystService {
     }
 
     public String deleteAnalyst (int id){
+
         analystRepository.deleteById(id);
         return "Analyst has been deleted successfully";
     }

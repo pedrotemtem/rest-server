@@ -12,7 +12,6 @@ public class AnalystResponse {
     private String name;
     private String email;
     private String password;
-
     public AnalystResponse (Analyst analyst) {
         this.id = analyst.getId();
         this.name = analyst.getName();

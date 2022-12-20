@@ -11,13 +11,10 @@ public class UpdateAuditRequest {
 
     @Positive(message="Audit ID is required")
     private Integer id;
-
     private Integer analystsId;
-
     private Integer marketplaceDetectionsId;
-
     private String parameter;
-
     private String dateTime;
-
+    private String oldValue;
+    private String newValue;
 }

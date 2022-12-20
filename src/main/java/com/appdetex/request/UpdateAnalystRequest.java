@@ -11,11 +11,7 @@ public class UpdateAnalystRequest {
 
     @Positive (message = "Analyst ID is required")
     private Integer id;
-
     private String name;
-
     private String email;
-
     private String password;
-
 }

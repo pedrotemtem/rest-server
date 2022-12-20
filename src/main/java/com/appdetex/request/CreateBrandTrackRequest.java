@@ -8,6 +8,5 @@ import lombok.Setter;
 public class CreateBrandTrackRequest {
 
     private String searchTerm;
-
     private Integer accountId;
 }

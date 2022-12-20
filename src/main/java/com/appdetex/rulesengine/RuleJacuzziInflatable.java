@@ -9,8 +9,8 @@ public class RuleJacuzziInflatable extends RulesAbstract implements RulesInterfa
 
     @Override
     public MarketplaceDetection rulesChecker(MarketplaceDetection marketplaceDetection){
-        if (marketplaceDetection.getAccountId() == 1) {
 
+        if (marketplaceDetection.getAccountId() == 1) {
             if (marketplaceDetection.getDescription().toLowerCase().contains("inflatable")
                     || marketplaceDetection.getDescription().toLowerCase().contains("insuflável")
                     || marketplaceDetection.getDescription().toLowerCase().contains("inflável")
@@ -22,6 +22,7 @@ public class RuleJacuzziInflatable extends RulesAbstract implements RulesInterfa
                 marketplaceDetection.setReasonCode("brand misuse");
             }
         }
+
         return marketplaceDetection;
     }
 

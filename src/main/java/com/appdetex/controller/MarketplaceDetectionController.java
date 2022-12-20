@@ -25,6 +25,7 @@ public class MarketplaceDetectionController {
 
     @GetMapping("getAll")
     public List<MarketplaceDetectionResponse> getAllMarketplaceDetections() {
+
         List<MarketplaceDetection> marketplaceDetectionList = marketplaceDetectionService.getAllMarketplaceDetections();
         List<MarketplaceDetectionResponse> marketplaceDetectionResponseList = new ArrayList<MarketplaceDetectionResponse>();
 
@@ -39,14 +40,12 @@ public class MarketplaceDetectionController {
     public MarketplaceDetectionResponse getMarketplaceDetectionById(@PathVariable int id) {
 
         MarketplaceDetection marketplaceDetection = marketplaceDetectionService.getDetection(id);
-
-
         return new MarketplaceDetectionResponse(marketplaceDetection);
-
     }
 
     @GetMapping("getByAccount/{accountId}")
     public List<MarketplaceDetectionResponse> getByAccountId(@PathVariable int accountId){
+
         List<MarketplaceDetection> marketplaceDetectionList = marketplaceDetectionService.getByAccountId(accountId);
         List<MarketplaceDetectionResponse> marketplaceDetectionResponseList = new ArrayList<MarketplaceDetectionResponse>();
 
@@ -59,20 +58,21 @@ public class MarketplaceDetectionController {
 
     @PostMapping("create")
     public MarketplaceDetectionResponse createMarketplaceDetection(@RequestBody CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
-        MarketplaceDetection marketplaceDetection = marketplaceDetectionService.createMarketplaceDetection(createMarketplaceDetectionRequest);
 
+        MarketplaceDetection marketplaceDetection = marketplaceDetectionService.createMarketplaceDetection(createMarketplaceDetectionRequest);
         return new MarketplaceDetectionResponse(marketplaceDetection);
     }
 
     @PutMapping("update")
     public MarketplaceDetectionResponse updateMarketplaceDetection(@RequestBody UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest){
-        MarketplaceDetection marketplaceDetection = marketplaceDetectionService.updateMarketplaceDetection(updateMarketplaceDetectionRequest);
 
+        MarketplaceDetection marketplaceDetection = marketplaceDetectionService.updateMarketplaceDetection(updateMarketplaceDetectionRequest);
         return new MarketplaceDetectionResponse(marketplaceDetection);
     }
 
     @DeleteMapping("delete")
     public String deleteMarketplaceDetection(@RequestParam int id){
+
         return marketplaceDetectionService.deleteMarketplaceDetection(id);
     }
 }

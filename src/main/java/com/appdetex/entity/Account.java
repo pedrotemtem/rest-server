@@ -27,5 +27,4 @@ public class Account {
         this.id = createAccountRequest.getId();
         this.name = createAccountRequest.getName();
     }
-
 }

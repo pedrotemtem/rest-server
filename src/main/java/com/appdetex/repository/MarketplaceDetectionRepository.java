@@ -12,6 +12,5 @@ import java.util.List;
 public interface MarketplaceDetectionRepository extends JpaRepository<MarketplaceDetection, Integer> {
 
     List<MarketplaceDetection> findByAccountId(int accountId);
-
     MarketplaceDetection findById(int id);
 }

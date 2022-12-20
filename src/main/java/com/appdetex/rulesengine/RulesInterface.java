@@ -7,5 +7,4 @@ public interface RulesInterface {
 
     MarketplaceDetection rulesChecker(MarketplaceDetection marketplaceDetection);
 
-
 }

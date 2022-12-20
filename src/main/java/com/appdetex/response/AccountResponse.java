@@ -9,9 +9,7 @@ import lombok.Setter;
 public class AccountResponse {
 
     private Integer id;
-
     private String name;
-
     public AccountResponse (Account account) {
         this.id = account.getId();
         this.name = account.getName();

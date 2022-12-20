@@ -9,35 +9,21 @@ import lombok.Setter;
 public class MarketplaceDetectionResponse {
 
     private Integer id;
-
     private Integer orderOnPage;
-
     private String captureDate;
-
     private String title;
-
     private String description;
-
     private String url;
-
     private String imageUrl;
-
     private String price;
-
     private String paidSearch;
-
     private String seller;
-
     private String marketplace;
-
     private String status;
-
     private String state;
-
     private String reasonCode;
-
     private Integer accountId;
-
+    private String searchTerm;
     public MarketplaceDetectionResponse(MarketplaceDetection marketplaceDetection) {
         this.id = marketplaceDetection.getId();
         this.orderOnPage = marketplaceDetection.getOrderOnPage();
@@ -54,5 +40,6 @@ public class MarketplaceDetectionResponse {
         this.state = marketplaceDetection.getState();
         this.reasonCode = marketplaceDetection.getReasonCode();
         this.accountId = marketplaceDetection.getAccountId();
+        this.searchTerm = marketplaceDetection.getSearchTerm();
     }
 }
