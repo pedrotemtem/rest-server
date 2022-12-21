@@ -38,7 +38,7 @@ public class Audit {
     private String newValue;
 
     public Audit(CreateAuditRequest createAuditRequest){
-        this.userId = createAuditRequest.getAnalystsId();
+        this.userId = createAuditRequest.getUserId();
         this.detectionId = createAuditRequest.getDetectionId();
         this.parameter = createAuditRequest.getParameter();
         this.dateTime = createAuditRequest.getDateTime();
