@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 public class CreateAuditRequest {
 
-    private Integer analystsId;
+    private Integer userId;
     private Integer detectionId;
     private String parameter;
     private String dateTime;
