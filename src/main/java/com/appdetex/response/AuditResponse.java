@@ -9,7 +9,7 @@ import lombok.Setter;
 public class AuditResponse {
 
     private Integer id;
-    private Integer analystId;
+    private Integer userId;
     private Integer detectionId;
     private String parameter;
     private String dateTime;
@@ -17,7 +17,7 @@ public class AuditResponse {
     private String newValue;
     public AuditResponse (Audit audit) {
         this.id = audit.getId();
-        this.analystId = audit.getAnalystId();
+        this.userId = audit.getUserId();
         this.detectionId = audit.getDetectionId();
         this.parameter = audit.getParameter();
         this.dateTime = audit.getDateTime();

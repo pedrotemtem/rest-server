@@ -36,7 +36,7 @@ public class AuditService {
         Audit audit = auditRepository.findById(updateAuditRequest.getId()).get();
 
         if(updateAuditRequest.getAnalystId() != 0){
-            audit.setAnalystId(updateAuditRequest.getAnalystId());
+            audit.setUserId(updateAuditRequest.getAnalystId());
         }
         if(updateAuditRequest.getDetectionId() != 0){
             audit.setDetectionId(updateAuditRequest.getDetectionId());

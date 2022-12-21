@@ -28,7 +28,7 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "roles_id")
+    @Column(name = "role_id")
     private Integer roleId;
 
     public User(CreateUserRequest createUserRequest){
