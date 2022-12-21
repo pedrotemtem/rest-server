@@ -11,7 +11,7 @@ public class UpdateAuditRequest {
 
     @Positive(message = "Audit ID is required")
     private Integer id;
-    private Integer analystId;
+    private Integer userId;
     private Integer detectionId;
     private String parameter;
     private String dateTime;
