@@ -73,13 +73,6 @@
 			<version>2.14.0</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/database-mysql -->
-		<dependency>
-			<groupId>org.jenkins-ci.plugins</groupId>
-			<artifactId>database-mysql</artifactId>
-			<version>1.5-rc27.67125805c75c</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>
