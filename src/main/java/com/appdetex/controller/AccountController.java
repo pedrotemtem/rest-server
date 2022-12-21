@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api/account/")
+@RequestMapping("/api/accounts/")
 public class AccountController {
 
     @Autowired
@@ -32,10 +32,10 @@ public class AccountController {
         return accountResponseList;
     }
 
-    @GetMapping("getAccountNameByDetectionId/{marketplaceDetectionsId}")
-    public String getAccountNameByDetectionId(@PathVariable int marketplaceDetectionsId) throws IOException {
+    @GetMapping("getAccountNameByDetectionId/{detectionId}")
+    public String getAccountNameByDetectionId(@PathVariable int detectionId) throws IOException {
 
-        return accountService.getAccountNameByDetectionId(marketplaceDetectionsId);
+        return accountService.getAccountNameByDetectionId(detectionId);
     }
 
     @GetMapping("getAccountName/{accountId}")

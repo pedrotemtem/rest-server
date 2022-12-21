@@ -19,11 +19,11 @@ public class Audit {
     @Column(name = "id")
     private Integer id;
 
-    @Column(name = "analysts_id")
-    private Integer analystsId;
+    @Column(name = "user_id")
+    private Integer userId;
 
-    @Column(name = "marketplace_detections_id")
-    private Integer marketplaceDetectionsId;
+    @Column(name = "detection_id")
+    private Integer detectionId;
 
     @Column(name = "parameter")
     private String parameter;
@@ -38,8 +38,8 @@ public class Audit {
     private String newValue;
 
     public Audit(CreateAuditRequest createAuditRequest){
-        this.analystsId = createAuditRequest.getAnalystsId();
-        this.marketplaceDetectionsId = createAuditRequest.getMarketplaceDetectionsId();
+        this.userId = createAuditRequest.getUserId();
+        this.detectionId = createAuditRequest.getDetectionId();
         this.parameter = createAuditRequest.getParameter();
         this.dateTime = createAuditRequest.getDateTime();
         this.oldValue = createAuditRequest.getOldValue();

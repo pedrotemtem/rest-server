@@ -1,6 +1,6 @@
 package com.appdetex.rulesengine;
 
-import com.appdetex.entity.MarketplaceDetection;
+import com.appdetex.entity.Detection;
 
 public class RuleJacuzziInflatable extends RulesAbstract implements RulesInterface {
 
@@ -8,22 +8,22 @@ public class RuleJacuzziInflatable extends RulesAbstract implements RulesInterfa
     }
 
     @Override
-    public MarketplaceDetection rulesChecker(MarketplaceDetection marketplaceDetection){
+    public Detection rulesChecker(Detection detection){
 
-        if (marketplaceDetection.getAccountId() == 1) {
-            if (marketplaceDetection.getDescription().toLowerCase().contains("inflatable")
-                    || marketplaceDetection.getDescription().toLowerCase().contains("insuflável")
-                    || marketplaceDetection.getDescription().toLowerCase().contains("inflável")
-                    || marketplaceDetection.getDescription().toLowerCase().contains("inflable")
-                    || marketplaceDetection.getTitle().toLowerCase().contains("inflatable")
-                    || marketplaceDetection.getTitle().toLowerCase().contains("insuflável")
-                    || marketplaceDetection.getTitle().toLowerCase().contains("inflable")) {
-                marketplaceDetection.setState("enforce");
-                marketplaceDetection.setReasonCode("brand misuse");
+        if (detection.getAccountId() == 1) {
+            if (detection.getDescription().toLowerCase().contains("inflatable")
+                    || detection.getDescription().toLowerCase().contains("insuflável")
+                    || detection.getDescription().toLowerCase().contains("inflável")
+                    || detection.getDescription().toLowerCase().contains("inflable")
+                    || detection.getTitle().toLowerCase().contains("inflatable")
+                    || detection.getTitle().toLowerCase().contains("insuflável")
+                    || detection.getTitle().toLowerCase().contains("inflable")) {
+                detection.setState("enforce");
+                detection.setReasonCode("brand misuse");
             }
         }
 
-        return marketplaceDetection;
+        return detection;
     }
 
 }

@@ -14,5 +14,4 @@ public class AccountResponse {
         this.id = account.getId();
         this.name = account.getName();
     }
-
 }

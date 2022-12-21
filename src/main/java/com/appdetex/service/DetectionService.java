@@ -1,10 +1,10 @@
 package com.appdetex.service;
 
 
-import com.appdetex.entity.MarketplaceDetection;
-import com.appdetex.repository.MarketplaceDetectionRepository;
-import com.appdetex.request.CreateMarketplaceDetectionRequest;
-import com.appdetex.request.UpdateMarketplaceDetectionRequest;
+import com.appdetex.entity.Detection;
+import com.appdetex.repository.DetectionRepository;
+import com.appdetex.request.CreateDetectionRequest;
+import com.appdetex.request.UpdateDetectionRequest;
 import com.appdetex.rulesengine.RuleSellers;
 import com.appdetex.rulesengine.RuleJacuzziInflatable;
 import com.appdetex.rulesengine.RuleJacuzziBrand;
@@ -23,74 +23,74 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Service
-public class MarketplaceDetectionService {
+public class DetectionService {
 
     @Autowired
-    MarketplaceDetectionRepository marketplaceDetectionRepository;
+    DetectionRepository detectionRepository;
 
-    public List<MarketplaceDetection> getAllMarketplaceDetections() {
+    public List<Detection> getAllDetections() {
 
-        return marketplaceDetectionRepository.findAll();
+        return detectionRepository.findAll();
     }
 
-    public MarketplaceDetection getDetection(int id) {
+    public Detection getDetection(int id) {
 
-        return marketplaceDetectionRepository.findById(id);
+        return detectionRepository.findById(id);
     }
 
-    public List<MarketplaceDetection> getByAccountId(int accountId)  {
+    public List<Detection> getByAccountId(int accountId)  {
 
-        return marketplaceDetectionRepository.findByAccountId(accountId);
+        return detectionRepository.findByAccountId(accountId);
     }
 
-    public MarketplaceDetection createMarketplaceDetection(CreateMarketplaceDetectionRequest createMarketplaceDetectionRequest) {
+    public Detection createDetection(CreateDetectionRequest createDetectionRequest) {
 
-        MarketplaceDetection marketplaceDetection = new MarketplaceDetection(createMarketplaceDetectionRequest);
+        Detection detection = new Detection(createDetectionRequest);
 
         RuleJacuzziBrand ruleJacuzziBrand = new RuleJacuzziBrand();
-        ruleJacuzziBrand.rulesChecker(marketplaceDetection);
+        ruleJacuzziBrand.rulesChecker(detection);
 
         RuleJacuzziInflatable ruleJacuzziInflatable = new RuleJacuzziInflatable();
-        ruleJacuzziInflatable.rulesChecker(marketplaceDetection);
+        ruleJacuzziInflatable.rulesChecker(detection);
 
         RuleSellers ruleSellers = new RuleSellers();
-        ruleSellers.rulesChecker(marketplaceDetection);
+        ruleSellers.rulesChecker(detection);
 
-        marketplaceDetection = marketplaceDetectionRepository.save(marketplaceDetection);
+        detection = detectionRepository.save(detection);
 
-        return marketplaceDetection;
+        return detection;
     }
 
-    public MarketplaceDetection updateMarketplaceDetection(UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest) {
+    public Detection updateDetection(UpdateDetectionRequest updateDetectionRequest) {
 
-        MarketplaceDetection marketplaceDetection = marketplaceDetectionRepository.findById(updateMarketplaceDetectionRequest.getId()).get();
+        Detection detection = detectionRepository.findById(updateDetectionRequest.getId()).get();
         String parameter;
 
-        if (updateMarketplaceDetectionRequest.getState() != null && !updateMarketplaceDetectionRequest.getState().isEmpty()) {
-            String oldValue = marketplaceDetection.getState();
-            marketplaceDetection.setState(updateMarketplaceDetectionRequest.getState());
-            String newValue = marketplaceDetection.getState();
+        if (updateDetectionRequest.getState() != null && !updateDetectionRequest.getState().isEmpty()) {
+            String oldValue = detection.getState();
+            detection.setState(updateDetectionRequest.getState());
+            String newValue = detection.getState();
             parameter = "state";
-            postAudit(updateMarketplaceDetectionRequest, parameter, oldValue, newValue);
+            postAudit(updateDetectionRequest, parameter, oldValue, newValue);
         }
 
-        if (updateMarketplaceDetectionRequest.getStatus() != null && !updateMarketplaceDetectionRequest.getStatus().isEmpty()) {
-            String oldValue = marketplaceDetection.getStatus();
-            marketplaceDetection.setStatus(updateMarketplaceDetectionRequest.getStatus());
-            String newValue = marketplaceDetection.getStatus();
+        if (updateDetectionRequest.getStatus() != null && !updateDetectionRequest.getStatus().isEmpty()) {
+            String oldValue = detection.getStatus();
+            detection.setStatus(updateDetectionRequest.getStatus());
+            String newValue = detection.getStatus();
             parameter = "status";
-            postAudit(updateMarketplaceDetectionRequest, parameter, oldValue, newValue);
+            postAudit(updateDetectionRequest, parameter, oldValue, newValue);
         }
 
-        if (updateMarketplaceDetectionRequest.getReasonCode() != null && !updateMarketplaceDetectionRequest.getReasonCode().isEmpty()) {
-            marketplaceDetection.setReasonCode(updateMarketplaceDetectionRequest.getReasonCode());
+        if (updateDetectionRequest.getReasonCode() != null && !updateDetectionRequest.getReasonCode().isEmpty()) {
+            detection.setReasonCode(updateDetectionRequest.getReasonCode());
         }
 
-        marketplaceDetection = marketplaceDetectionRepository.save(marketplaceDetection);
-        return marketplaceDetection;
+        detection = detectionRepository.save(detection);
+        return detection;
     }
 
-    private static void postAudit(UpdateMarketplaceDetectionRequest updateMarketplaceDetectionRequest,
+    private static void postAudit(UpdateDetectionRequest updateDetectionRequest,
                                   String parameter, String oldValue, String newValue) {
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
@@ -98,8 +98,8 @@ public class MarketplaceDetectionService {
         if (parameter.equals("state")) {
             try (CloseableHttpClient client = HttpClients.createDefault()) {
                 HttpPost httpPost = new HttpPost("http://localhost:8008/api/audit/create");
-                String json = "{ \"analystsId\" : \"" + updateMarketplaceDetectionRequest.getAnalystId()
-                        + "\",\"marketplaceDetectionsId\" : \"" + updateMarketplaceDetectionRequest.getId()
+                String json = "{ \"userId\" : \"" + updateDetectionRequest.getUserId()
+                        + "\",\"detectionId\" : \"" + updateDetectionRequest.getId()
                         + "\",\"parameter\" : \"" + parameter
                         + "\",\"dateTime\" : \"" + dtf.format(LocalDateTime.now())
                         + "\",\"oldValue\" : \"" + oldValue
@@ -118,8 +118,8 @@ public class MarketplaceDetectionService {
         } else if (parameter.equals("status")) {
             try (CloseableHttpClient client = HttpClients.createDefault()) {
                 HttpPost httpPost = new HttpPost("http://localhost:8008/api/audit/create");
-                String json = "{ \"analystsId\" : \"" + updateMarketplaceDetectionRequest.getAnalystId()
-                        + "\",\"marketplaceDetectionsId\" : \"" + updateMarketplaceDetectionRequest.getId()
+                String json = "{ \"userId\" : \"" + updateDetectionRequest.getUserId()
+                        + "\",\"detectionId\" : \"" + updateDetectionRequest.getId()
                         + "\",\"parameter\" : \"" + parameter
                         + "\",\"dateTime\" : \"" + dtf.format(LocalDateTime.now())
                         + "\",\"oldValue\" : \"" + oldValue
@@ -138,9 +138,9 @@ public class MarketplaceDetectionService {
         }
     }
 
-    public String deleteMarketplaceDetection (int id) {
+    public String deleteDetection(int id) {
 
-        marketplaceDetectionRepository.deleteById(id);
+        detectionRepository.deleteById(id);
         return "Detection has been deleted successfully";
     }
 }
