@@ -2,7 +2,7 @@ package com.appdetex.rulesengine;
 
 import com.appdetex.entity.Detection;
 
-public class RuleSellers extends RulesAbstract implements RulesInterface{
+public class RuleSellers implements RulesInterface{
 
     public RuleSellers() {
     }

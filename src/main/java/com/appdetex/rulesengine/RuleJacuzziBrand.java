@@ -2,7 +2,7 @@ package com.appdetex.rulesengine;
 
 import com.appdetex.entity.Detection;
 
-public class RuleJacuzziBrand extends RulesAbstract implements RulesInterface{
+public class RuleJacuzziBrand implements RulesInterface{
 
     public RuleJacuzziBrand() {
     }

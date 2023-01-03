@@ -2,7 +2,7 @@ package com.appdetex.rulesengine;
 
 import com.appdetex.entity.Detection;
 
-public class RuleJacuzziInflatable extends RulesAbstract implements RulesInterface {
+public class RuleJacuzziInflatable implements RulesInterface {
 
     public RuleJacuzziInflatable() {
     }
