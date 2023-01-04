@@ -23,7 +23,7 @@ import java.util.List;
 public class AccountService {
 
     @Autowired
-     AccountRepository accountRepository;
+    AccountRepository accountRepository;
 
     public String getAccountNameByDetectionId(int detectionId) throws IOException {
 

@@ -1,7 +1,9 @@
 package com.appdetex.controller;
 
 import com.appdetex.demo.DemoApplication;
+import com.appdetex.entity.Detection;
 import com.appdetex.service.AccountService;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,25 +33,31 @@ class AccountControllerTest {
     @MockBean
     AccountService accountService;
 
+    Detection detection =new Detection();
+
     @Test
     void getAllAccounts() throws Exception {
         assert(accountService).getAllAccounts().isEmpty();
 
     }
 
+    @Disabled("Not implemented yet")
     @Test
     void getAccountNameByDetectionId() throws Exception {
 
     }
 
+    @Disabled("Not implemented yet")
     @Test
     void getAccountName() {
     }
 
+    @Disabled("Not implemented yet")
     @Test
     void createAccount() {
     }
 
+    @Disabled("Not implemented yet")
     @Test
     void deleteAccount() {
     }
