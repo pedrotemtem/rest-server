@@ -34,6 +34,12 @@ public class DetectionController {
         return detectionResponseList;
     }
 
+    @GetMapping("numberByDay")
+    public ArrayList<String> getNumberDetectionsByDay() {
+
+        return detectionService.getDetectionsByDay();
+    }
+
     @GetMapping("getById/{id}")
     public DetectionResponse getDetectionById(@PathVariable int id) {
 

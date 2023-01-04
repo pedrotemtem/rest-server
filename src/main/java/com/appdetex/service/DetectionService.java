@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -27,6 +28,11 @@ public class DetectionService {
 
     @Autowired
     DetectionRepository detectionRepository;
+
+    public ArrayList<String> getDetectionsByDay() {
+
+        return detectionRepository.getNumberDetectionsByDay();
+    }
 
     public List<Detection> getAllDetections() {
 

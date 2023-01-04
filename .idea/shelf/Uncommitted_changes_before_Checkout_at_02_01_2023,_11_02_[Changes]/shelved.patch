@@ -1,0 +1,33 @@
+Index: Dockerfile
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Dockerfile b/Dockerfile
+new file mode 100644
+--- /dev/null	(date 1671706228459)
++++ b/Dockerfile	(date 1671706228459)
+@@ -0,0 +1,4 @@
++FROM openjdk:17
++COPY target/demo-0.0.1-SNAPSHOT.jar /tmp
++EXPOSE 8080
++ENTRYPOINT ["java", "-jar", "/tmp/demo-0.0.1-SNAPSHOT.jar"]
+\ No newline at end of file
+Index: target/classes/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>server.port = 8008\nspring.datasource.url=jdbc:mysql://172.17.0.2:3306/marketplace_harvest\nspring.datasource.username=root\nspring.datasource.password=appdetex123\nspring.jpa.database=mysql
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/target/classes/application.properties b/target/classes/application.properties
+--- a/target/classes/application.properties	(revision 1b4cbdb9dc0db48dab2d46207e5c36d7ce013c11)
++++ b/target/classes/application.properties	(date 1671705858588)
+@@ -1,5 +1,5 @@
+ server.port = 8008
+-spring.datasource.url=jdbc:mysql://172.17.0.2:3306/marketplace_harvest
++spring.datasource.url=jdbc:mysql://mysqlcontainer:3306/marketplace_harvest
+ spring.datasource.username=root
+ spring.datasource.password=appdetex123
+ spring.jpa.database=mysql
+\ No newline at end of file
