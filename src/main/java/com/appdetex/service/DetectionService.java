@@ -29,9 +29,9 @@ public class DetectionService {
     @Autowired
     DetectionRepository detectionRepository;
 
-    public ArrayList<String> getDetectionsByDay(String date, int limit) {
+    public ArrayList<String> getDetectionsByDay(String initialDate, String endingDate) {
 
-        return detectionRepository.getNumberDetectionsByDay(date, limit);
+        return detectionRepository.getNumberDetectionsByDay(initialDate, endingDate);
     }
 
     public List<Detection> getAllDetections() {

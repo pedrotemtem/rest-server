@@ -17,9 +17,8 @@ public interface DetectionRepository extends JpaRepository<Detection, Integer> {
     Detection findById(int id);
     @Query(value = "SELECT date1, marketplace, count(id)\n" +
             "FROM (SELECT STR_TO_DATE(SUBSTRING(capture_date,1,10),\"%Y/%m/%d\") AS date1, marketplace, id FROM detections) AS D\n" +
-            "WHERE date1 >= :date\n" +
+            "WHERE date1 BETWEEN :initialDate AND :endingDate\n" +
             "GROUP BY 1,2\n" +
-            "ORDER BY date1 ASC\n" +
-            "LIMIT :limit ;",nativeQuery = true)
-    ArrayList<String> getNumberDetectionsByDay(@Param("date") String date, @Param("limit") int limit);
+            "ORDER BY date1 ASC",nativeQuery = true)
+    ArrayList<String> getNumberDetectionsByDay(@Param("initialDate") String initialDate, @Param("endingDate") String endingDate);
 }
