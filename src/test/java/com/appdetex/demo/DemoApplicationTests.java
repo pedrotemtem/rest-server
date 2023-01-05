@@ -14,7 +14,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @SpringBootTest
 class DemoApplicationTests {
 
-	@Autowired
+
 	AccountController accountController;
 
 	@Autowired

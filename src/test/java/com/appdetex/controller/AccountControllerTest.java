@@ -2,10 +2,12 @@ package com.appdetex.controller;
 
 import com.appdetex.demo.DemoApplication;
 import com.appdetex.entity.Detection;
+import com.appdetex.repository.AccountRepository;
 import com.appdetex.service.AccountService;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -18,21 +20,29 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @AutoConfigureMockMvc
+@EnableWebMvc
 @ContextConfiguration(classes = {AccountController.class})
 @WebMvcTest
 class AccountControllerTest {
 
     @Autowired
     private MockMvc mvc;
+
+    @InjectMocks
+    private AccountRepository accountRepository;
+
     @MockBean
     AccountService accountService;
 
+
+    @MockBean
     Detection detection =new Detection();
 
     @Test
