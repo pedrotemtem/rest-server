@@ -14,7 +14,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @SpringBootTest
 class DemoApplicationTests {
 
-
+	@Autowired
 	AccountController accountController;
 
 	@Autowired
@@ -52,6 +52,7 @@ class DemoApplicationTests {
 	public void contextLoads4(){
 		Assertions.assertThat(roleController).isNotNull();
 	}
+
 	@Test
 	public void contextLoads5() {
 		Assertions.assertThat(detectionController).isNotNull();

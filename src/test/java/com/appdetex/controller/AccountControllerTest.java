@@ -35,7 +35,7 @@ class AccountControllerTest {
     @Autowired
     private MockMvc mvc;
 
-    @InjectMocks
+    @Autowired
     private AccountRepository accountRepository;
 
     @MockBean
@@ -43,7 +43,7 @@ class AccountControllerTest {
 
 
     @MockBean
-    Detection detection =new Detection();
+    Detection detection;
 
     @Test
     void getAllAccounts() throws Exception {
