@@ -34,10 +34,10 @@ public class DetectionController {
         return detectionResponseList;
     }
 
-    @GetMapping("numberByDay")
-    public ArrayList<String> getNumberDetectionsByDay() {
+    @GetMapping("numberByDay/{initialDate}/{endingDate}")
+    public ArrayList<String> getNumberDetectionsByDay(@PathVariable String initialDate, @PathVariable String endingDate) {
 
-        return detectionService.getDetectionsByDay();
+        return detectionService.getDetectionsByDay(initialDate, endingDate);
     }
 
     @GetMapping("getById/{id}")
