@@ -3,11 +3,13 @@ package com.appdetex.service;
 
 import com.appdetex.entity.Detection;
 import com.appdetex.repository.DetectionRepository;
+import com.appdetex.request.CreateAuditRequest;
 import com.appdetex.request.CreateDetectionRequest;
 import com.appdetex.request.UpdateDetectionRequest;
-import com.appdetex.rulesengine.RuleSellers;
-import com.appdetex.rulesengine.RuleJacuzziInflatable;
-import com.appdetex.rulesengine.RuleJacuzziBrand;
+import com.appdetex.rulesengine.SellerRule;
+import com.appdetex.rulesengine.InflatableJacuzziRule;
+import com.appdetex.rulesengine.JacuzziBrandRule;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -53,14 +55,14 @@ public class DetectionService {
 
         Detection detection = new Detection(createDetectionRequest);
 
-        RuleJacuzziBrand ruleJacuzziBrand = new RuleJacuzziBrand();
-        ruleJacuzziBrand.rulesChecker(detection);
+        JacuzziBrandRule jacuzziBrandRule = new JacuzziBrandRule();
+        jacuzziBrandRule.checkRule(detection);
 
-        RuleJacuzziInflatable ruleJacuzziInflatable = new RuleJacuzziInflatable();
-        ruleJacuzziInflatable.rulesChecker(detection);
+        InflatableJacuzziRule inflatableJacuzziRule = new InflatableJacuzziRule();
+        inflatableJacuzziRule.checkRule(detection);
 
-        RuleSellers ruleSellers = new RuleSellers();
-        ruleSellers.rulesChecker(detection);
+        SellerRule sellerRule = new SellerRule();
+        sellerRule.checkRule(detection);
 
         detection = detectionRepository.save(detection);
 
@@ -104,13 +106,16 @@ public class DetectionService {
         if (parameter.equals("state")) {
             try (CloseableHttpClient client = HttpClients.createDefault()) {
                 HttpPost httpPost = new HttpPost("http://localhost:8008/api/audit/create");
-                String json = "{ \"userId\" : \"" + updateDetectionRequest.getUserId()
-                        + "\",\"detectionId\" : \"" + updateDetectionRequest.getId()
-                        + "\",\"parameter\" : \"" + parameter
-                        + "\",\"dateTime\" : \"" + dtf.format(LocalDateTime.now())
-                        + "\",\"oldValue\" : \"" + oldValue
-                        + "\",\"newValue\" : \"" + newValue + "\"}";
-                StringEntity entity = new StringEntity(json, "UTF-8");
+                CreateAuditRequest createAuditRequest = new CreateAuditRequest();
+                createAuditRequest.setUserId(updateDetectionRequest.getUserId());
+                createAuditRequest.setDetectionId(updateDetectionRequest.getId());
+                createAuditRequest.setParameter(parameter);
+                createAuditRequest.setDateTime(dtf.format((LocalDateTime.now())));
+                createAuditRequest.setOldValue(oldValue);
+                createAuditRequest.setNewValue(newValue);
+                ObjectMapper mapper = new ObjectMapper();
+                String jsonString = mapper.writeValueAsString(createAuditRequest);
+                StringEntity entity = new StringEntity(jsonString, "UTF-8");
                 httpPost.setEntity(entity);
                 httpPost.setHeader("Accept", "application/json");
                 httpPost.setHeader("Content-type", "application/json;charset=UTF-8");
@@ -124,13 +129,16 @@ public class DetectionService {
         } else if (parameter.equals("status")) {
             try (CloseableHttpClient client = HttpClients.createDefault()) {
                 HttpPost httpPost = new HttpPost("http://localhost:8008/api/audit/create");
-                String json = "{ \"userId\" : \"" + updateDetectionRequest.getUserId()
-                        + "\",\"detectionId\" : \"" + updateDetectionRequest.getId()
-                        + "\",\"parameter\" : \"" + parameter
-                        + "\",\"dateTime\" : \"" + dtf.format(LocalDateTime.now())
-                        + "\",\"oldValue\" : \"" + oldValue
-                        + "\",\"newValue\" : \"" + newValue + "\"}";
-                StringEntity entity = new StringEntity(json, "UTF-8");
+                CreateAuditRequest createAuditRequest = new CreateAuditRequest();
+                createAuditRequest.setUserId(updateDetectionRequest.getUserId());
+                createAuditRequest.setDetectionId(updateDetectionRequest.getId());
+                createAuditRequest.setParameter(parameter);
+                createAuditRequest.setDateTime(dtf.format((LocalDateTime.now())));
+                createAuditRequest.setOldValue(oldValue);
+                createAuditRequest.setNewValue(newValue);
+                ObjectMapper mapper = new ObjectMapper();
+                String jsonString = mapper.writeValueAsString(createAuditRequest);
+                StringEntity entity = new StringEntity(jsonString, "UTF-8");
                 httpPost.setEntity(entity);
                 httpPost.setHeader("Accept", "application/json");
                 httpPost.setHeader("Content-type", "application/json;charset=UTF-8");

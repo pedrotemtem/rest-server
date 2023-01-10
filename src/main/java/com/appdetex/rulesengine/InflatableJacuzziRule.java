@@ -2,13 +2,13 @@ package com.appdetex.rulesengine;
 
 import com.appdetex.entity.Detection;
 
-public class RuleJacuzziInflatable extends RulesAbstract implements RulesInterface {
+public class InflatableJacuzziRule implements DetectionRule {
 
-    public RuleJacuzziInflatable() {
+    public InflatableJacuzziRule() {
     }
 
     @Override
-    public Detection rulesChecker(Detection detection){
+    public Detection checkRule(Detection detection){
 
         if (detection.getAccountId() == 1) {
             if (detection.getDescription().toLowerCase().contains("inflatable")
