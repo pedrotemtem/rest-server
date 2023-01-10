@@ -9,43 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="added tests for each rule">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_01_2023,_10_10_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_01_2023__10_10__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/rulesengine/InflatableJacuzziRuleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/rulesengine/SellerRulesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/service/DetectionServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/classpath.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/appdetex/repository/RulesRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/BrandRules.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/InflatableJacuzziRule.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/Rules.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/SellerRules.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/classpath.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/rulesengine/BrandRulesTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/rulesengine/InflatableJacuzziRuleTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/rulesengine/SellerRulesTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/service/DetectionServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_22.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_01_2023,_11_02_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_01_2023,_14_58_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_01_2023__11_02__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_01_2023__14_58__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/RuleSellers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/RuleSellers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/SellerRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/SellerRules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/service/DetectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/service/DetectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/rulesengine/BrandRulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/rulesengine/BrandRulesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/service/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/service/AccountServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/demo/DemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/RuleJacuzziBrand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/RuleJacuzziInflatable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/RuleSellers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/RulesInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/appdetex/rulesengine/RuleJacuzziBrandTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/appdetex/service/AccountServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/service/AccountServiceTest.class" afterDir="false" />
+    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="updated rules engine">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/service/DetectionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/service/DetectionServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +33,9 @@
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/SellerRules.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
@@ -255,7 +223,7 @@
       <workItem from="1672763617273" duration="8777000" />
       <workItem from="1672847054515" duration="1798000" />
       <workItem from="1673353602468" duration="1405000" />
-      <workItem from="1673362029522" duration="349000" />
+      <workItem from="1673362029522" duration="745000" />
     </task>
     <task id="LOCAL-00001" summary="version11">
       <created>1671531453901</created>
@@ -362,7 +330,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672853390666</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="updated rules engine">
+      <created>1673362587527</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673362587527</updated>
+    </task>
+    <task id="LOCAL-00017" summary="updated rules engine">
+      <created>1673362673304</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673362673304</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,9 +373,9 @@
     <MESSAGE value="start of tests for spring boot" />
     <MESSAGE value="more changes and tests for rules started" />
     <MESSAGE value="more changes" />
-    <MESSAGE value="updated rules engine" />
     <MESSAGE value="added tests for each rule" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tests for each rule" />
+    <MESSAGE value="updated rules engine" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated rules engine" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rest_server$DemoApplicationTests.ic" NAME="DemoApplicationTests Coverage Results" MODIFIED="1673015374950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
