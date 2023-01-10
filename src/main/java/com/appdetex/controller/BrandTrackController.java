@@ -18,7 +18,7 @@ public class BrandTrackController {
     @Autowired
     BrandTrackService brandTrackService;
 
-    @GetMapping("getAll")
+    @GetMapping("")
     public List<BrandTrackResponse> getAllBrandTracks() {
 
         List<BrandTrack> brandTrackList = brandTrackService.getAllBrandTracks();
@@ -31,7 +31,7 @@ public class BrandTrackController {
         return brandTrackResponseList;
     }
 
-    @GetMapping("getByAccount/{accountId}")
+    @GetMapping("{accountId}")
     public List<BrandTrackResponse> getByAccountId(@PathVariable int accountId){
 
         List<BrandTrack> brandTrackList = brandTrackService.getByAccountId(accountId);

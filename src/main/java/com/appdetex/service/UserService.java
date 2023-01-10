@@ -22,29 +22,27 @@ public class UserService {
     public User createUser(CreateUserRequest createUserRequest){
 
         User user = new User(createUserRequest);
-        user = userRepository.save(user);
-        return user;
+        return userRepository.save(user);
     }
 
     public User updateUser(UpdateUserRequest updateUserRequest){
 
         User user = userRepository.findById(updateUserRequest.getId()).get();
 
-        if(updateUserRequest.getName() != null && !updateUserRequest.getName().isEmpty()){
+        if (updateUserRequest.getName() != null && !updateUserRequest.getName().isEmpty()){
             user.setName(updateUserRequest.getName());
         }
-        if(updateUserRequest.getEmail() != null && !updateUserRequest.getEmail().isEmpty()){
+        if (updateUserRequest.getEmail() != null && !updateUserRequest.getEmail().isEmpty()){
             user.setEmail(updateUserRequest.getEmail());
         }
-        if(updateUserRequest.getPassword() != null && !updateUserRequest.getPassword().isEmpty()){
+        if (updateUserRequest.getPassword() != null && !updateUserRequest.getPassword().isEmpty()){
             user.setPassword(updateUserRequest.getPassword());
         }
-        if(updateUserRequest.getRoleId() != 0){
+        if (updateUserRequest.getRoleId() != 0){
             user.setRoleId(updateUserRequest.getRoleId());
         }
 
-        user = userRepository.save(user);
-        return user;
+        return userRepository.save(user);
     }
 
     public String deleteUser(int id){

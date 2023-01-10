@@ -21,14 +21,12 @@ public class RoleService {
     public Role createRole (CreateRoleRequest createRoleRequest){
 
         Role role = new Role(createRoleRequest);
-        role = roleRepository.save(role);
-        return role;
+        return roleRepository.save(role);
     }
 
     public String getRoleName(int roleId) {
 
         Role role = roleRepository.findById(roleId);
-
         return role.getRole();
     }
 

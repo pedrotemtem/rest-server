@@ -20,7 +20,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping("getAll")
+    @GetMapping("")
     public List<UserResponse> getAllUsers() {
 
         List<User> userList = userService.getAllUsers();
