@@ -1,9 +1,6 @@
 package com.appdetex.service;
 
-
-import com.appdetex.entity.Audit;
 import com.appdetex.entity.Detection;
-import com.appdetex.repository.AuditRepository;
 import com.appdetex.repository.DetectionRepository;
 import com.appdetex.request.CreateAuditRequest;
 import com.appdetex.request.CreateDetectionRequest;
