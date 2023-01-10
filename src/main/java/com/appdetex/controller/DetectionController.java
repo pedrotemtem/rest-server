@@ -21,7 +21,7 @@ public class DetectionController {
     DetectionService detectionService;
     AuditService auditService;
 
-    @GetMapping("getAll")
+    @GetMapping("")
     public List<DetectionResponse> getAllDetections() {
 
         List<Detection> detectionList = detectionService.getAllDetections();
@@ -34,20 +34,20 @@ public class DetectionController {
         return detectionResponseList;
     }
 
-    @GetMapping("numberByDay/{initialDate}/{endingDate}")
+    @GetMapping("{initialDate}/{endingDate}")
     public ArrayList<String> getNumberDetectionsByDay(@PathVariable String initialDate, @PathVariable String endingDate) {
 
         return detectionService.getDetectionsByDay(initialDate, endingDate);
     }
 
-    @GetMapping("getById/{id}")
+    @GetMapping("{id}")
     public DetectionResponse getDetectionById(@PathVariable int id) {
 
         Detection detection = detectionService.getDetection(id);
         return new DetectionResponse(detection);
     }
 
-    @GetMapping("getByAccount/{accountId}")
+    @GetMapping("/account/{accountId}")
     public List<DetectionResponse> getByAccountId(@PathVariable int accountId){
 
         List<Detection> detectionList = detectionService.getByAccountId(accountId);

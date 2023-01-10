@@ -19,7 +19,7 @@ public class AuditController {
     @Autowired
     AuditService auditService;
 
-    @GetMapping("getAll")
+    @GetMapping("")
     public List<AuditResponse> getAllAudits() {
 
         List<Audit> auditList = auditService.getAllAudits();
@@ -32,7 +32,7 @@ public class AuditController {
         return auditResponseList;
     }
 
-    @GetMapping("getByDetection/{detectionId}")
+    @GetMapping("{detectionId}")
     public List<AuditResponse> getByDetectionId(@PathVariable int detectionId) {
 
         List<Audit> auditList = auditService.getByDetectionId(detectionId);

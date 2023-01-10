@@ -1,6 +1,5 @@
 package com.appdetex.service;
 
-
 import com.appdetex.entity.Detection;
 import com.appdetex.repository.DetectionRepository;
 import com.appdetex.request.CreateAuditRequest;
@@ -9,17 +8,9 @@ import com.appdetex.request.UpdateDetectionRequest;
 import com.appdetex.rulesengine.SellerRule;
 import com.appdetex.rulesengine.InflatableJacuzziRule;
 import com.appdetex.rulesengine.JacuzziBrandRule;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -30,6 +21,9 @@ public class DetectionService {
 
     @Autowired
     DetectionRepository detectionRepository;
+
+    @Autowired
+    AuditService auditService;
 
     public ArrayList<String> getDetectionsByDay(String initialDate, String endingDate) {
 
@@ -64,92 +58,44 @@ public class DetectionService {
         SellerRule sellerRule = new SellerRule();
         sellerRule.checkRule(detection);
 
-        detection = detectionRepository.save(detection);
-
-        return detection;
+        return detectionRepository.save(detection);
     }
 
     public Detection updateDetection(UpdateDetectionRequest updateDetectionRequest) {
 
         Detection detection = detectionRepository.findById(updateDetectionRequest.getId()).get();
-        String parameter;
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        CreateAuditRequest createAuditRequest = new CreateAuditRequest();
 
         if (updateDetectionRequest.getState() != null && !updateDetectionRequest.getState().isEmpty()) {
-            String oldValue = detection.getState();
+
+            createAuditRequest.setUserId(updateDetectionRequest.getUserId());
+            createAuditRequest.setDetectionId(updateDetectionRequest.getId());
+            createAuditRequest.setParameter("state");
+            createAuditRequest.setDateTime(dtf.format((LocalDateTime.now())));
+            createAuditRequest.setOldValue(detection.getState());
             detection.setState(updateDetectionRequest.getState());
-            String newValue = detection.getState();
-            parameter = "state";
-            postAudit(updateDetectionRequest, parameter, oldValue, newValue);
+            createAuditRequest.setNewValue(detection.getState());
+            auditService.createAudit(createAuditRequest);
         }
 
         if (updateDetectionRequest.getStatus() != null && !updateDetectionRequest.getStatus().isEmpty()) {
-            String oldValue = detection.getStatus();
+
+            createAuditRequest.setUserId(updateDetectionRequest.getUserId());
+            createAuditRequest.setDetectionId(updateDetectionRequest.getId());
+            createAuditRequest.setParameter("status");
+            createAuditRequest.setDateTime(dtf.format((LocalDateTime.now())));
+            createAuditRequest.setOldValue(detection.getStatus());
             detection.setStatus(updateDetectionRequest.getStatus());
-            String newValue = detection.getStatus();
-            parameter = "status";
-            postAudit(updateDetectionRequest, parameter, oldValue, newValue);
+            createAuditRequest.setNewValue(detection.getStatus());
+            auditService.createAudit(createAuditRequest);
         }
 
         if (updateDetectionRequest.getReasonCode() != null && !updateDetectionRequest.getReasonCode().isEmpty()) {
             detection.setReasonCode(updateDetectionRequest.getReasonCode());
         }
 
-        detection = detectionRepository.save(detection);
-        return detection;
-    }
-
-    private static void postAudit(UpdateDetectionRequest updateDetectionRequest,
-                                  String parameter, String oldValue, String newValue) {
-
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-
-        if (parameter.equals("state")) {
-            try (CloseableHttpClient client = HttpClients.createDefault()) {
-                HttpPost httpPost = new HttpPost("http://localhost:8008/api/audit/create");
-                CreateAuditRequest createAuditRequest = new CreateAuditRequest();
-                createAuditRequest.setUserId(updateDetectionRequest.getUserId());
-                createAuditRequest.setDetectionId(updateDetectionRequest.getId());
-                createAuditRequest.setParameter(parameter);
-                createAuditRequest.setDateTime(dtf.format((LocalDateTime.now())));
-                createAuditRequest.setOldValue(oldValue);
-                createAuditRequest.setNewValue(newValue);
-                ObjectMapper mapper = new ObjectMapper();
-                String jsonString = mapper.writeValueAsString(createAuditRequest);
-                StringEntity entity = new StringEntity(jsonString, "UTF-8");
-                httpPost.setEntity(entity);
-                httpPost.setHeader("Accept", "application/json");
-                httpPost.setHeader("Content-type", "application/json;charset=UTF-8");
-                CloseableHttpResponse response = client.execute(httpPost);
-                parameter = null;
-            } catch (ClientProtocolException e) {
-                throw new RuntimeException(e);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        } else if (parameter.equals("status")) {
-            try (CloseableHttpClient client = HttpClients.createDefault()) {
-                HttpPost httpPost = new HttpPost("http://localhost:8008/api/audit/create");
-                CreateAuditRequest createAuditRequest = new CreateAuditRequest();
-                createAuditRequest.setUserId(updateDetectionRequest.getUserId());
-                createAuditRequest.setDetectionId(updateDetectionRequest.getId());
-                createAuditRequest.setParameter(parameter);
-                createAuditRequest.setDateTime(dtf.format((LocalDateTime.now())));
-                createAuditRequest.setOldValue(oldValue);
-                createAuditRequest.setNewValue(newValue);
-                ObjectMapper mapper = new ObjectMapper();
-                String jsonString = mapper.writeValueAsString(createAuditRequest);
-                StringEntity entity = new StringEntity(jsonString, "UTF-8");
-                httpPost.setEntity(entity);
-                httpPost.setHeader("Accept", "application/json");
-                httpPost.setHeader("Content-type", "application/json;charset=UTF-8");
-                CloseableHttpResponse response = client.execute(httpPost);
-                parameter = null;
-            } catch (ClientProtocolException e) {
-                throw new RuntimeException(e);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
+        return detectionRepository.save(detection);
     }
 
     public String deleteDetection(int id) {
