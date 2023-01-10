@@ -9,7 +9,7 @@ import com.appdetex.request.UpdateDetectionRequest;
 import com.appdetex.rulesengine.BrandRules;
 import com.appdetex.rulesengine.InflatableJacuzziRule;
 import com.appdetex.rulesengine.Rules;
-import com.appdetex.rulesengine.RuleSellers;
+import com.appdetex.rulesengine.SellerRules;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -57,7 +57,7 @@ public class DetectionService {
     public void addRulesToRep(){
         Rules brandRules = new BrandRules();
         Rules inflatableJacuzziRule = new InflatableJacuzziRule();
-        Rules sellerRules =new RuleSellers();
+        Rules sellerRules =new SellerRules();
 
         rulesRepository.save(brandRules);
         rulesRepository.save(inflatableJacuzziRule);
