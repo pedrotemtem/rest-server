@@ -22,14 +22,13 @@ import java.util.List;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.when;
 
-@ExtendWith(MockitoExtension.class)
+
 class AccountServiceTest {
 
-    @Mock
-    private AccountRepository accountRepository;
+    AccountRepository accountRepository;
 
-    @InjectMocks
-    private AccountService accountService;
+
+    AccountService accountService = new AccountService();
 
 
 

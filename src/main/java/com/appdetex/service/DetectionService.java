@@ -9,7 +9,7 @@ import com.appdetex.request.UpdateDetectionRequest;
 import com.appdetex.rulesengine.BrandRules;
 import com.appdetex.rulesengine.InflatableJacuzziRule;
 import com.appdetex.rulesengine.Rules;
-import com.appdetex.rulesengine.SellerRules;
+import com.appdetex.rulesengine.RuleSellers;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -24,7 +24,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 @Service
 public class DetectionService {
@@ -34,7 +33,6 @@ public class DetectionService {
 
     @Autowired
     RulesRepository rulesRepository;
-    Rules rules;
 
     public ArrayList<String> getDetectionsByDay(String initialDate, String endingDate) {
 
@@ -59,7 +57,7 @@ public class DetectionService {
     public void addRulesToRep(){
         Rules brandRules = new BrandRules();
         Rules inflatableJacuzziRule = new InflatableJacuzziRule();
-        Rules sellerRules =new SellerRules();
+        Rules sellerRules =new RuleSellers();
 
         rulesRepository.save(brandRules);
         rulesRepository.save(inflatableJacuzziRule);

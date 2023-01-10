@@ -9,25 +9,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="more changes">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/repository/RulesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/BrandRules.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/InflatableJacuzziRule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/Rules.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/rulesengine/RulesJacuzziBrandTest.java" afterDir="false" />
+    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="added tests for each rule">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_01_2023,_10_10_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_01_2023__10_10__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/rulesengine/InflatableJacuzziRuleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/rulesengine/SellerRulesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/service/DetectionServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/classpath.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/appdetex/repository/RulesRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/BrandRules.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/InflatableJacuzziRule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/Rules.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/SellerRules.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/classpath.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/rulesengine/BrandRulesTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/rulesengine/InflatableJacuzziRuleTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/rulesengine/SellerRulesTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/service/DetectionServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_01_2023,_11_02_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_01_2023,_14_58_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_01_2023__11_02__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_01_2023__14_58__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/RuleJacuzziBrand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/RuleJacuzziInflatable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/RuleSellers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/SellerRules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/RulesInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/RuleSellers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/RuleSellers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/SellerRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/SellerRules.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/service/DetectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/service/DetectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/rulesengine/RuleJacuzziBrandTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/DetectionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/DetectionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/repository/DetectionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/repository/DetectionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/rulesengine/BrandRulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/rulesengine/BrandRulesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/service/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/service/AccountServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/demo/DemoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/RuleJacuzziBrand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/RuleJacuzziInflatable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/RuleSellers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/RulesInterface.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/appdetex/rulesengine/RuleJacuzziBrandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/rulesengine/RuleJacuzziBrandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/appdetex/rulesengine/RuleJacuzziBrandTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/appdetex/service/AccountServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/service/AccountServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +56,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -116,8 +134,24 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="AccountServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.InflatableJacuzziRuleTest.checkTitleJacuzzi">
+    <configuration name="BrandRulesTest.createDetectionAndCheckBrandRules" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.appdetex.rulesengine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.appdetex.rulesengine" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.rulesengine.BrandRulesTest" />
+      <option name="METHOD_NAME" value="createDetectionAndCheckBrandRules" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DetectionServiceTest.createDetectionAndCheckSellerNameApple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-server" />
       <extension name="coverage">
         <pattern>
@@ -126,28 +160,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.appdetex.service" />
-      <option name="MAIN_CLASS_NAME" value="com.appdetex.service.AccountServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.service.DetectionServiceTest" />
+      <option name="METHOD_NAME" value="createDetectionAndCheckSellerNameApple" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InflatableJacuzziRuleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.appdetex.rulesengine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.appdetex.rulesengine" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.rulesengine.InflatableJacuzziRuleTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.appdetex.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.appdetex.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.appdetex.demo.DemoApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RuleJacuzziBrandTest.rulesChecker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InflatableJacuzziRuleTest.checkTitleJacuzzi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-server" />
       <extension name="coverage">
         <pattern>
@@ -156,14 +191,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.appdetex.rulesengine" />
-      <option name="MAIN_CLASS_NAME" value="com.appdetex.rulesengine.RuleJacuzziBrandTest" />
-      <option name="METHOD_NAME" value="rulesChecker" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.rulesengine.InflatableJacuzziRuleTest" />
+      <option name="METHOD_NAME" value="checkTitleJacuzzi" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RulesEngineJacuzziBrandTest.rulesChecker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SellerRulesTest.createDetectionAndCheckSellerNameApple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-server" />
       <extension name="coverage">
         <pattern>
@@ -172,40 +207,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.appdetex.rulesengine" />
-      <option name="MAIN_CLASS_NAME" value="com.appdetex.rulesengine.RulesEngineJacuzziBrandTest" />
-      <option name="METHOD_NAME" value="rulesChecker(com.appdetex.entity.Detection)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RulesJacuzziBrandTest.createDetectionRuleCheck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.appdetex.rulesengine.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.appdetex.rulesengine" />
-      <option name="MAIN_CLASS_NAME" value="com.appdetex.rulesengine.RulesJacuzziBrandTest" />
-      <option name="METHOD_NAME" value="createDetectionRuleCheck" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RulesJacuzziBrandTest.rulesChecker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.appdetex.rulesengine.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.appdetex.rulesengine" />
-      <option name="MAIN_CLASS_NAME" value="com.appdetex.rulesengine.RulesJacuzziBrandTest" />
-      <option name="METHOD_NAME" value="rulesChecker" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.rulesengine.SellerRulesTest" />
+      <option name="METHOD_NAME" value="createDetectionAndCheckSellerNameApple" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -226,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RulesEngineJacuzziBrandTest.rulesChecker" />
-        <item itemvalue="JUnit.RulesJacuzziBrandTest.rulesChecker" />
-        <item itemvalue="JUnit.RulesJacuzziBrandTest.createDetectionRuleCheck" />
-        <item itemvalue="JUnit.DemoApplicationTests" />
-        <item itemvalue="JUnit.AccountServiceTest" />
+        <item itemvalue="JUnit.InflatableJacuzziRuleTest.checkTitleJacuzzi" />
+        <item itemvalue="JUnit.InflatableJacuzziRuleTest" />
+        <item itemvalue="JUnit.SellerRulesTest.createDetectionAndCheckSellerNameApple" />
+        <item itemvalue="JUnit.BrandRulesTest.createDetectionAndCheckBrandRules" />
+        <item itemvalue="JUnit.DetectionServiceTest.createDetectionAndCheckSellerNameApple" />
       </list>
     </recent_temporary>
   </component>
@@ -251,6 +254,8 @@
       <workItem from="1671704062847" duration="20493000" />
       <workItem from="1672763617273" duration="8777000" />
       <workItem from="1672847054515" duration="1798000" />
+      <workItem from="1673353602468" duration="1405000" />
+      <workItem from="1673362029522" duration="349000" />
     </task>
     <task id="LOCAL-00001" summary="version11">
       <created>1671531453901</created>
@@ -386,7 +391,9 @@
     <MESSAGE value="start of tests for spring boot" />
     <MESSAGE value="more changes and tests for rules started" />
     <MESSAGE value="more changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="more changes" />
+    <MESSAGE value="updated rules engine" />
+    <MESSAGE value="added tests for each rule" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tests for each rule" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rest_server$DemoApplicationTests.ic" NAME="DemoApplicationTests Coverage Results" MODIFIED="1673015374950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
