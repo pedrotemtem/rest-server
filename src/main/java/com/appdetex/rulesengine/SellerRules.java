@@ -2,13 +2,13 @@ package com.appdetex.rulesengine;
 
 import com.appdetex.entity.Detection;
 
-public class RuleSellers implements RulesInterface{
+public class SellerRules implements Rules {
 
-    public RuleSellers() {
+    public SellerRules() {
     }
 
     @Override
-    public Detection rulesChecker(Detection detection) {
+    public Detection checkRules(Detection detection) {
 
         if(detection.getAccountId()==2
                 && detection.getSeller().equals("Apple")){

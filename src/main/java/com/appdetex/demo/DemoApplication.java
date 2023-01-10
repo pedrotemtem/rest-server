@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan({"com.appdetex.controller", "com.appdetex.service"})
+@ComponentScan({"com.appdetex.controller", "com.appdetex.service", "com.appdetex.rulesengine"})
 @EntityScan("com.appdetex.entity")
 @EnableJpaRepositories("com.appdetex.repository")
 public class DemoApplication {

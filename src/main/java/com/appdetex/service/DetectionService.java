@@ -3,11 +3,13 @@ package com.appdetex.service;
 
 import com.appdetex.entity.Detection;
 import com.appdetex.repository.DetectionRepository;
+import com.appdetex.repository.RulesRepository;
 import com.appdetex.request.CreateDetectionRequest;
 import com.appdetex.request.UpdateDetectionRequest;
-import com.appdetex.rulesengine.RuleSellers;
-import com.appdetex.rulesengine.RuleJacuzziInflatable;
-import com.appdetex.rulesengine.RuleJacuzziBrand;
+import com.appdetex.rulesengine.BrandRules;
+import com.appdetex.rulesengine.InflatableJacuzziRule;
+import com.appdetex.rulesengine.Rules;
+import com.appdetex.rulesengine.SellerRules;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -22,12 +24,17 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 @Service
 public class DetectionService {
 
     @Autowired
     DetectionRepository detectionRepository;
+
+    @Autowired
+    RulesRepository rulesRepository;
+    Rules rules;
 
     public ArrayList<String> getDetectionsByDay(String initialDate, String endingDate) {
 
@@ -49,18 +56,26 @@ public class DetectionService {
         return detectionRepository.findByAccountId(accountId);
     }
 
+    public void addRulesToRep(){
+        Rules brandRules = new BrandRules();
+        Rules inflatableJacuzziRule = new InflatableJacuzziRule();
+        Rules sellerRules =new SellerRules();
+
+        rulesRepository.save(brandRules);
+        rulesRepository.save(inflatableJacuzziRule);
+        rulesRepository.save(sellerRules);
+    }
+
     public Detection createDetection(CreateDetectionRequest createDetectionRequest) {
 
         Detection detection = new Detection(createDetectionRequest);
 
-        RuleJacuzziBrand ruleJacuzziBrand = new RuleJacuzziBrand();
-        ruleJacuzziBrand.rulesChecker(detection);
+        addRulesToRep();
 
-        RuleJacuzziInflatable ruleJacuzziInflatable = new RuleJacuzziInflatable();
-        ruleJacuzziInflatable.rulesChecker(detection);
-
-        RuleSellers ruleSellers = new RuleSellers();
-        ruleSellers.rulesChecker(detection);
+        List<Rules> rule = rulesRepository.findAll();
+        for (Rules rules1 : rule) {
+            rules1.checkRules(detection);
+        }
 
         detection = detectionRepository.save(detection);
 
