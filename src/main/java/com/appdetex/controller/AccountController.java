@@ -20,7 +20,7 @@ public class AccountController {
     @Autowired
     AccountService accountService;
 
-    @GetMapping("getAll")
+    @GetMapping("")
     public List<AccountResponse> getAllAccounts() {
 
         List<Account> accountList = accountService.getAllAccounts();
@@ -33,13 +33,13 @@ public class AccountController {
         return accountResponseList;
     }
 
-    @GetMapping("getAccountNameByDetectionId/{detectionId}")
+    @GetMapping("detection/{detectionId}")
     public String getAccountNameByDetectionId(@PathVariable int detectionId) throws IOException {
 
         return accountService.getAccountNameByDetectionId(detectionId);
     }
 
-    @GetMapping("getAccountName/{accountId}")
+    @GetMapping("{accountId}")
     public String getAccountName(@PathVariable int accountId) {
 
         return accountService.getAccountNameByAccountId(accountId);

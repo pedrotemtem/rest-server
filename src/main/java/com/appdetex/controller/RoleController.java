@@ -18,7 +18,7 @@ public class RoleController {
     @Autowired
     RoleService roleService;
 
-    @GetMapping("getAll")
+    @GetMapping("")
     public List<RoleResponse> getAllRoles() {
 
         List<Role> roleList = roleService.getAllRoles();
@@ -31,7 +31,7 @@ public class RoleController {
         return roleResponseList;
     }
 
-    @GetMapping("getRoleName/{roleId}")
+    @GetMapping("{roleId}")
     public String getRoleName(@PathVariable int roleId){
 
         return roleService.getRoleName(roleId);

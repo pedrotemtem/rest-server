@@ -27,9 +27,7 @@ public class BrandTrackService {
     public BrandTrack createBrandTrack(CreateBrandTrackRequest createBrandTrackRequest) {
 
         BrandTrack brandTrack = new BrandTrack(createBrandTrackRequest);
-        brandTrack = brandTrackRepository.save(brandTrack);
-
-        return brandTrack;
+        return brandTrackRepository.save(brandTrack);
     }
 
     public String deleteBrandTrack(int id){
