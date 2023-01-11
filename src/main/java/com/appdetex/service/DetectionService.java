@@ -1,14 +1,17 @@
 package com.appdetex.service;
 
 
+import com.appdetex.entity.Audit;
 import com.appdetex.entity.Detection;
 import com.appdetex.repository.DetectionRepository;
+import com.appdetex.repository.RulesRepository;
 import com.appdetex.request.CreateAuditRequest;
 import com.appdetex.request.CreateDetectionRequest;
 import com.appdetex.request.UpdateDetectionRequest;
-import com.appdetex.rulesengine.SellerRule;
+import com.appdetex.rulesengine.Rules;
+import com.appdetex.rulesengine.SellerRules;
 import com.appdetex.rulesengine.InflatableJacuzziRule;
-import com.appdetex.rulesengine.JacuzziBrandRule;
+import com.appdetex.rulesengine.BrandRules;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -32,6 +35,8 @@ public class DetectionService {
     DetectionRepository detectionRepository;
 
     @Autowired
+    AuditService auditService;
+
     RulesRepository rulesRepository;
 
     public ArrayList<String> getDetectionsByDay(String initialDate, String endingDate) {
@@ -83,35 +88,6 @@ public class DetectionService {
     public Detection updateDetection(UpdateDetectionRequest updateDetectionRequest) {
 
         Detection detection = detectionRepository.findById(updateDetectionRequest.getId()).get();
-        String parameter;
-
-        if (updateDetectionRequest.getState() != null && !updateDetectionRequest.getState().isEmpty()) {
-            String oldValue = detection.getState();
-            detection.setState(updateDetectionRequest.getState());
-            String newValue = detection.getState();
-            parameter = "state";
-            postAudit(updateDetectionRequest, parameter, oldValue, newValue);
-        }
-
-        if (updateDetectionRequest.getStatus() != null && !updateDetectionRequest.getStatus().isEmpty()) {
-            String oldValue = detection.getStatus();
-            detection.setStatus(updateDetectionRequest.getStatus());
-            String newValue = detection.getStatus();
-            parameter = "status";
-            postAudit(updateDetectionRequest, parameter, oldValue, newValue);
-        }
-
-        if (updateDetectionRequest.getReasonCode() != null && !updateDetectionRequest.getReasonCode().isEmpty()) {
-            detection.setReasonCode(updateDetectionRequest.getReasonCode());
-        }
-
-        detection = detectionRepository.save(detection);
-        return detection;
-    }
-
-    private static void postAudit(UpdateDetectionRequest updateDetectionRequest,
-                                  String parameter, String oldValue, String newValue) {
-
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         CreateAuditRequest createAuditRequest = new CreateAuditRequest();
 

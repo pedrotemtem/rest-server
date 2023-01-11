@@ -3,8 +3,10 @@ package com.appdetex.rulesengine;
 import com.appdetex.entity.Detection;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 
 class BrandRulesTest {
 
