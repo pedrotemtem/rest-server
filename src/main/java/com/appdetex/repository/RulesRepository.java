@@ -11,5 +11,4 @@ import java.util.List;
 @Repository
 public interface RulesRepository extends JpaRepository<Rules, Integer> {
 
-    Rules findById(int ruleId);
 }

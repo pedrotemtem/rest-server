@@ -9,32 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="updated rules engine">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_3_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rest-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rest-server.iml" afterDir="false" />
+    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/service/DetectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/service/DetectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/rulesengine/BrandRulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/rulesengine/BrandRulesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/service/DetectionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/service/DetectionServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/AuditController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/AuditController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/BrandTrackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/BrandTrackController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/DetectionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/DetectionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/RoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/SellerRules.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/SellerRules.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/AuditService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/AuditService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/BrandTrackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/BrandTrackService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/RoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/appdetex/rulesengine/BrandRulesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/rulesengine/BrandRulesTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/appdetex/service/DetectionServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/service/DetectionServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/repository/RulesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/repository/RulesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/classpath.index" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +104,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DetectionServiceTest.getDetectionsById">
+  <component name="RunManager" selected="Spring Boot.DemoApplication (1)">
     <configuration name="DetectionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-server" />
       <extension name="coverage">
@@ -367,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673362673304</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="...">
+      <created>1673429769715</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1673429769715</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +383,8 @@
     <MESSAGE value="more changes" />
     <MESSAGE value="added tests for each rule" />
     <MESSAGE value="updated rules engine" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated rules engine" />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rest_server$DemoApplicationTests.ic" NAME="DemoApplicationTests Coverage Results" MODIFIED="1673015374950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
