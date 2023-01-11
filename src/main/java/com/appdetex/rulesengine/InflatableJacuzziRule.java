@@ -2,26 +2,39 @@ package com.appdetex.rulesengine;
 
 import com.appdetex.entity.Detection;
 
-public class InflatableJacuzziRule implements DetectionRule {
+import java.util.ArrayList;
+import java.util.List;
+
+public class InflatableJacuzziRule implements Rules {
 
     public InflatableJacuzziRule() {
     }
 
+    List<String> namesToEnforce = new ArrayList<>();
+
+
     @Override
-    public Detection checkRule(Detection detection){
+    public Detection checkRules(Detection detection){
+
+        namesToEnforce.add("hinchable");
+        namesToEnforce.add("insuflável");
+        namesToEnforce.add("inflável");
+        namesToEnforce.add("inflable");
+        namesToEnforce.add("insuflável");
+        namesToEnforce.add("inflatable");
+
 
         if (detection.getAccountId() == 1) {
-            if (detection.getDescription().toLowerCase().contains("inflatable")
-                    || detection.getDescription().toLowerCase().contains("insuflável")
-                    || detection.getDescription().toLowerCase().contains("inflável")
-                    || detection.getDescription().toLowerCase().contains("inflable")
-                    || detection.getTitle().toLowerCase().contains("inflatable")
-                    || detection.getTitle().toLowerCase().contains("insuflável")
-                    || detection.getTitle().toLowerCase().contains("inflable")) {
-                detection.setState("enforce");
-                detection.setReasonCode("brand misuse");
+            for (String names : namesToEnforce) {
+                if (detection.getDescription().toLowerCase().contains(names)
+                        || detection.getTitle().toLowerCase().contains(names)) {
+                    detection.setState("enforce");
+                    detection.setReasonCode("brand misuse");
+                }
             }
         }
+
+
 
         return detection;
     }

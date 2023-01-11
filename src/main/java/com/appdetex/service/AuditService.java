@@ -4,6 +4,7 @@ import com.appdetex.repository.AuditRepository;
 import com.appdetex.request.CreateAuditRequest;
 import com.appdetex.entity.Audit;
 import com.appdetex.request.UpdateAuditRequest;
+import org.hibernate.service.spi.InjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

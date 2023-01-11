@@ -1,0 +1,223 @@
+Index: .idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml b/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml
+new file mode 100644
+--- /dev/null	(date 1673429358339)
++++ b/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml	(date 1673429358339)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.apache.commons:commons-lang3:3.12.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml b/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml
+new file mode 100644
+--- /dev/null	(date 1673429358342)
++++ b/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml	(date 1673429358342)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.apache.httpcomponents:httpclient:4.5.13">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_5.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_5.xml b/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_5.xml
+new file mode 100644
+--- /dev/null	(date 1673429358345)
++++ b/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_5.xml	(date 1673429358345)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.springframework.boot:spring-boot-starter-test:2.7.5">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.7.5/spring-boot-starter-test-2.7.5.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.7.5/spring-boot-starter-test-2.7.5-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.7.5/spring-boot-starter-test-2.7.5-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ArtifactsWorkspaceSettings\">\n    <artifacts-to-build>\n      <artifact name=\"rest-server:jar\" />\n    </artifacts-to-build>\n  </component>\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b15c63f7-d446-4789-8bef-cc5fce610c92\" name=\"Changes\" comment=\"more changes and tests for rules started\">\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/appdetex/controller/AccountController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/appdetex/controller/AccountController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/appdetex/service/AccountService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/appdetex/service/AccountService.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/com/appdetex/controller/AccountControllerTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/com/appdetex/controller/AccountControllerTest.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/com/appdetex/demo/DemoApplicationTests.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/com/appdetex/demo/DemoApplicationTests.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/test/java/com/appdetex/service/AccountServiceTest.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/test/java/com/appdetex/service/AccountServiceTest.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"AnnotationType\" />\n        <option value=\"JUnit5 Test Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\n      </map>\n    </option>\n  </component>\n  <component name=\"JpbToolWindowState\">\n    <option name=\"isToolWindowVisible\" value=\"false\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"useMavenConfig\" value=\"true\" />\n      </MavenGeneralSettings>\n    </option>\n  </component>\n  <component name=\"ProjectId\" id=\"2JAmOpKRLuwbaq6ySpZxOaBVeSM\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,\n    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,\n    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,\n    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,\n    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/pedro.temtem/Documents/rest-server/rest-server&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;Docker&quot;,\n    &quot;spring.configuration.checksum&quot;: &quot;d56b0237a348e1e59be94cafd25aaed1&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CreateClassDialog.RecentsKey\">\n      <recent name=\"com.appdetex.service\" />\n    </key>\n    <key name=\"CreateTestDialog.Recents.Supers\">\n      <recent name=\"\" />\n    </key>\n    <key name=\"CreateTestDialog.RecentsKey\">\n      <recent name=\"com.appdetex.rulesengine\" />\n      <recent name=\"com.appdetex.service\" />\n      <recent name=\"com.appdetex.controller\" />\n    </key>\n  </component>\n  <component name=\"RunDashboard\">\n    <option name=\"configurationTypes\">\n      <set>\n        <option value=\"SpringBootApplicationConfigurationType\" />\n        <option value=\"docker-deploy\" />\n      </set>\n    </option>\n  </component>\n  <component name=\"RunManager\" selected=\"Spring Boot.DemoApplication (1)\">\n    <configuration name=\"AccountControllerTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"rest-server\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.appdetex.controller.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"com.appdetex.controller\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.appdetex.controller.AccountControllerTest\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"CreateMarketplaceDetectionServiceTest.createMarketplaceDetection (1)\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"demo\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.appdetex.service.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"com.appdetex.service\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.appdetex.service.CreateMarketplaceDetectionServiceTest\" />\n      <option name=\"METHOD_NAME\" value=\"createMarketplaceDetection(com.appdetex.entity.MarketplaceDetection)\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"DemoApplicationTests\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"rest-server\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.appdetex.demo.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"com.appdetex.demo\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.appdetex.demo.DemoApplicationTests\" />\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"DemoApplicationTests.contextLoads\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"rest-server\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.appdetex.demo.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <option name=\"PACKAGE_NAME\" value=\"com.appdetex.demo\" />\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.appdetex.demo.DemoApplicationTests\" />\n      <option name=\"METHOD_NAME\" value=\"contextLoads\" />\n      <option name=\"TEST_OBJECT\" value=\"method\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"DemoApplication (1)\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\n      <module name=\"rest-server\" />\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.appdetex.demo.DemoApplication\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"DemoApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"rest-server\" />\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.appdetex.demo.DemoApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"com.appdetex.demo.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"docker-deploy\" factoryName=\"dockerfile\" temporary=\"true\">\n      <deployment type=\"dockerfile\">\n        <settings />\n      </deployment>\n      <method v=\"2\" />\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"JUnit.DemoApplicationTests\" />\n        <item itemvalue=\"JUnit.AccountControllerTest\" />\n        <item itemvalue=\"Spring Boot.DemoApplication\" />\n        <item itemvalue=\"JUnit.DemoApplicationTests.contextLoads\" />\n        <item itemvalue=\"JUnit.CreateMarketplaceDetectionServiceTest.createMarketplaceDetection (1)\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"SpringBeansView\">\n    <option name=\"beanDetailsProportion\" value=\"0.3\" />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b15c63f7-d446-4789-8bef-cc5fce610c92\" name=\"Changes\" comment=\"\" />\n      <created>1671529232962</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1671529232962</updated>\n      <workItem from=\"1671529234127\" duration=\"2289000\" />\n      <workItem from=\"1671534945034\" duration=\"9691000\" />\n      <workItem from=\"1671638106158\" duration=\"6429000\" />\n      <workItem from=\"1671704062847\" duration=\"20493000\" />\n      <workItem from=\"1672763617273\" duration=\"8777000\" />\n      <workItem from=\"1672847054515\" duration=\"1798000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"version11\">\n      <created>1671531453901</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1671531453902</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"new dependency added, testing jenkins mysql plugin\">\n      <created>1671618972165</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1671618972165</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"dependency not working, back to how it was\">\n      <created>1671619080126</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1671619080126</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"java version 17\">\n      <created>1671633504932</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1671633504932</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"changed mysql ip to test jenkins connection\">\n      <created>1671636780524</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1671636780524</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"changed mysql ip (again, now dynamic) to test jenkins connection, only works with jenkins\">\n      <created>1671638336783</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1671638336783</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"changed mysql ip (again, now dynamic) to test jenkins connection, only works with jenkins\">\n      <created>1671638648567</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1671638648567</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"changed mysql ip (again, now dynamic) to test jenkins connection, only works with jenkins\">\n      <created>1671638841636</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1671638841636</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"changed mysql ip (again, now dynamic) to test jenkins connection, only works with jenkins\">\n      <created>1671639135786</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1671639135786</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"mysqlcontainer connected to jenkinscontainer\">\n      <created>1671639577476</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1671639577476</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"dockerfile updated\">\n      <created>1672671594036</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1672671594036</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"start of tests for spring boot\">\n      <created>1672759301894</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1672759301894</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"more changes\">\n      <created>1672760635992</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1672760635992</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"more changes and tests for rules started\">\n      <created>1672827449703</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1672827449704</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"15\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"version11\" />\n    <MESSAGE value=\"new dependency added, testing jenkins mysql plugin\" />\n    <MESSAGE value=\"dependency not working, back to how it was\" />\n    <MESSAGE value=\"java version 17\" />\n    <MESSAGE value=\"changed mysql ip to test jenkins connection\" />\n    <MESSAGE value=\"changed mysql ip (again, now dynamic) to test jenkins connection, only works with jenkins\" />\n    <MESSAGE value=\"mysqlcontainer connected to jenkinscontainer\" />\n    <MESSAGE value=\"dockerfile updated\" />\n    <MESSAGE value=\"start of tests for spring boot\" />\n    <MESSAGE value=\"more changes\" />\n    <MESSAGE value=\"more changes and tests for rules started\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"more changes and tests for rules started\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 190c360804b21247b1146e2d7b0c87c2e801be67)
++++ b/.idea/workspace.xml	(date 1673429581760)
+@@ -9,12 +9,50 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="more changes and tests for rules started">
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/controller/AccountController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/service/AccountService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/controller/AccountControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/controller/AccountControllerTest.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/demo/DemoApplicationTests.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/service/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/service/AccountServiceTest.java" afterDir="false" />
++    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="...">
++      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_5.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/AccountController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/AuditController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/AuditController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/BrandTrackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/BrandTrackController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/DetectionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/DetectionController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/RoleController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/controller/UserController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/demo/DemoApplication.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/entity/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/entity/Account.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/entity/Audit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/entity/Audit.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/entity/BrandTrack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/entity/BrandTrack.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/entity/Detection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/entity/Detection.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/entity/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/entity/Role.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/entity/User.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/repository/AccountRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/repository/AccountRepository.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/repository/AuditRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/repository/AuditRepository.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/repository/BrandTrackRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/repository/BrandTrackRepository.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/repository/DetectionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/repository/DetectionRepository.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/repository/RoleRepository.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/repository/UserRepository.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/request/CreateAccountRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/request/CreateAccountRequest.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/request/CreateAuditRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/request/CreateAuditRequest.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/request/CreateBrandTrackRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/request/CreateBrandTrackRequest.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/request/CreateDetectionRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/request/CreateDetectionRequest.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/request/CreateRoleRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/request/CreateRoleRequest.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/request/CreateUserRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/request/CreateUserRequest.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/request/UpdateAuditRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/request/UpdateAuditRequest.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/request/UpdateDetectionRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/request/UpdateDetectionRequest.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/request/UpdateUserRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/request/UpdateUserRequest.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/response/AccountResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/response/AccountResponse.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/response/AuditResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/response/AuditResponse.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/response/BrandTrackResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/response/BrandTrackResponse.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/response/DetectionResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/response/DetectionResponse.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/response/RoleResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/response/RoleResponse.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/response/UserResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/response/UserResponse.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/AccountService.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/AuditService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/AuditService.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/BrandTrackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/BrandTrackService.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/RoleService.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/UserService.class" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -32,7 +70,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
++        <entry key="$PROJECT_DIR$" value="jenkins_temtem_tests" />
+       </map>
+     </option>
+   </component>
+@@ -54,31 +92,32 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/Users/pedro.temtem/Documents/rest-server/rest-server&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;Docker&quot;,
+-    &quot;spring.configuration.checksum&quot;: &quot;d56b0237a348e1e59be94cafd25aaed1&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RequestMappingsPanelOrder0": "0",
++    "RequestMappingsPanelOrder1": "1",
++    "RequestMappingsPanelWidth0": "75",
++    "RequestMappingsPanelWidth1": "75",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
++    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
++    "last_opened_file_path": "/Users/pedro.temtem/Documents/rest-server/rest-server",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "settings.editor.selected.configurable": "Docker",
++    "spring.configuration.checksum": "d56b0237a348e1e59be94cafd25aaed1",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CreateClassDialog.RecentsKey">
+       <recent name="com.appdetex.service" />
+@@ -344,6 +383,15 @@
+     <MESSAGE value="start of tests for spring boot" />
+     <MESSAGE value="more changes" />
+     <MESSAGE value="more changes and tests for rules started" />
+-    <option name="LAST_COMMIT_MESSAGE" value="more changes and tests for rules started" />
++    <MESSAGE value="..." />
++    <option name="LAST_COMMIT_MESSAGE" value="..." />
++  </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/rest_server$DemoApplicationTests.ic" NAME="DemoApplicationTests Coverage Results" MODIFIED="1673015374950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++      <FILTER>com.appdetex.demo.*</FILTER>
++    </SUITE>
++    <SUITE FILE_PATH="coverage/rest_server$AccountServiceTest.ic" NAME="AccountServiceTest Coverage Results" MODIFIED="1673004088693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++      <FILTER>com.appdetex.service.*</FILTER>
++    </SUITE>
+   </component>
+ </project>
+\ No newline at end of file

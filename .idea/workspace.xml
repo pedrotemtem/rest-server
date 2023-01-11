@@ -1,42 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="rest-server:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3331254-9635-44a8-acdc-5890b2d2207f" name="Changes" comment="Adds query that returns the day and the number of detections in that day (by Marketplace) - in a certain time interval.">
+    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="...">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/repository/RulesRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/BrandRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/BrandRules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/Rules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/Rules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/service/DetectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/service/DetectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/repository/RulesRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/BrandRules.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/BrandRules.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="joana" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/SellerRules.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,88 +57,342 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="alwaysUpdateSnapshots" value="true" />
-        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
-        <option name="usePluginRegistry" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2IXDwA6xnrk4GbK19UPGfzbKgv1" />
+  <component name="ProjectId" id="2JAmOpKRLuwbaq6ySpZxOaBVeSM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/pedro.reis/Desktop/Java Projects/rest-server&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pedro.temtem/Documents/rest-server/rest-server&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;d56b0237a348e1e59be94cafd25aaed1&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="DemoApplication" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.appdetex.demo.DemoApplication" />
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.appdetex.service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.appdetex.rulesengine" />
+      <recent name="com.appdetex.service" />
+      <recent name="com.appdetex.controller" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+        <option value="docker-deploy" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DemoApplication (1)">
+    <configuration name="DetectionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.appdetex.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.appdetex.service" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.service.DetectionServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DetectionServiceTest.getDetections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.appdetex.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.appdetex.service" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.service.DetectionServiceTest" />
+      <option name="METHOD_NAME" value="getDetections" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DetectionServiceTest.getDetectionsById (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.appdetex.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.appdetex.service" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.service.DetectionServiceTest" />
+      <option name="METHOD_NAME" value="getDetectionsById(com.appdetex.entity.Detection)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DetectionServiceTest.getDetectionsById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.appdetex.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.appdetex.service" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.service.DetectionServiceTest" />
+      <option name="METHOD_NAME" value="getDetectionsById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SellerRulesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.appdetex.rulesengine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.appdetex.rulesengine" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.rulesengine.SellerRulesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="demo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="demo" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.appdetex.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.appdetex.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DetectionServiceTest.getDetectionsById" />
+        <item itemvalue="JUnit.DetectionServiceTest.getDetectionsById (1)" />
+        <item itemvalue="JUnit.DetectionServiceTest" />
+        <item itemvalue="JUnit.DetectionServiceTest.getDetections" />
+        <item itemvalue="JUnit.SellerRulesTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b3331254-9635-44a8-acdc-5890b2d2207f" name="Changes" comment="" />
-      <created>1670319270336</created>
+      <changelist id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="" />
+      <created>1671529232962</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670319270336</updated>
+      <updated>1671529232962</updated>
+      <workItem from="1671529234127" duration="2289000" />
+      <workItem from="1671534945034" duration="9691000" />
+      <workItem from="1671638106158" duration="6429000" />
+      <workItem from="1671704062847" duration="20493000" />
+      <workItem from="1672763617273" duration="8777000" />
+      <workItem from="1672847054515" duration="1798000" />
+      <workItem from="1673353602468" duration="1405000" />
+      <workItem from="1673362029522" duration="745000" />
     </task>
-    <task id="LOCAL-00001" summary="adds comments">
-      <created>1670837819175</created>
+    <task id="LOCAL-00001" summary="version11">
+      <created>1671531453901</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1670837819175</updated>
+      <updated>1671531453902</updated>
     </task>
-    <task id="LOCAL-00002" summary="Adds getRoleName">
-      <created>1671542881690</created>
+    <task id="LOCAL-00002" summary="new dependency added, testing jenkins mysql plugin">
+      <created>1671618972165</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1671542881690</updated>
+      <updated>1671618972165</updated>
     </task>
-    <task id="LOCAL-00003" summary="Changes rolesID to roleId">
-      <created>1671544148214</created>
+    <task id="LOCAL-00003" summary="dependency not working, back to how it was">
+      <created>1671619080126</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1671544148214</updated>
+      <updated>1671619080126</updated>
     </task>
-    <task id="LOCAL-00004" summary="Adds query that returns the day and the number of detections in that day">
-      <created>1672848212625</created>
+    <task id="LOCAL-00004" summary="java version 17">
+      <created>1671633504932</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1672848212625</updated>
+      <updated>1671633504932</updated>
     </task>
-    <task id="LOCAL-00005" summary="Adds query that returns the day and the number of detections in that day (by Marketplace).">
-      <created>1672934154609</created>
+    <task id="LOCAL-00005" summary="changed mysql ip to test jenkins connection">
+      <created>1671636780524</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1672934154609</updated>
+      <updated>1671636780524</updated>
     </task>
-    <task id="LOCAL-00006" summary="Adds query that returns the day and the number of detections in that day (by Marketplace) - in a certain time interval.">
-      <created>1672937162029</created>
+    <task id="LOCAL-00006" summary="changed mysql ip (again, now dynamic) to test jenkins connection, only works with jenkins">
+      <created>1671638336783</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1672937162029</updated>
+      <updated>1671638336783</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="changed mysql ip (again, now dynamic) to test jenkins connection, only works with jenkins">
+      <created>1671638648567</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671638648567</updated>
+    </task>
+    <task id="LOCAL-00008" summary="changed mysql ip (again, now dynamic) to test jenkins connection, only works with jenkins">
+      <created>1671638841636</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671638841636</updated>
+    </task>
+    <task id="LOCAL-00009" summary="changed mysql ip (again, now dynamic) to test jenkins connection, only works with jenkins">
+      <created>1671639135786</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671639135786</updated>
+    </task>
+    <task id="LOCAL-00010" summary="mysqlcontainer connected to jenkinscontainer">
+      <created>1671639577476</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671639577476</updated>
+    </task>
+    <task id="LOCAL-00011" summary="dockerfile updated">
+      <created>1672671594036</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1672671594036</updated>
+    </task>
+    <task id="LOCAL-00012" summary="start of tests for spring boot">
+      <created>1672759301894</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672759301894</updated>
+    </task>
+    <task id="LOCAL-00013" summary="more changes">
+      <created>1672760635992</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1672760635992</updated>
+    </task>
+    <task id="LOCAL-00014" summary="more changes and tests for rules started">
+      <created>1672827449703</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1672827449704</updated>
+    </task>
+    <task id="LOCAL-00015" summary="more changes">
+      <created>1672853390666</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1672853390666</updated>
+    </task>
+    <task id="LOCAL-00016" summary="updated rules engine">
+      <created>1673362587527</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673362587527</updated>
+    </task>
+    <task id="LOCAL-00017" summary="updated rules engine">
+      <created>1673362673304</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673362673304</updated>
+    </task>
+    <task id="LOCAL-00018" summary="...">
+      <created>1673429769715</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1673429769715</updated>
+    </task>
+    <task id="LOCAL-00019" summary="...">
+      <created>1673432131645</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1673432131645</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -139,12 +406,28 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adds comments" />
-    <MESSAGE value="Adds getRoleName" />
-    <MESSAGE value="Changes rolesID to roleId" />
-    <MESSAGE value="Adds query that returns the day and the number of detections in that day" />
-    <MESSAGE value="Adds query that returns the day and the number of detections in that day (by Marketplace)." />
-    <MESSAGE value="Adds query that returns the day and the number of detections in that day (by Marketplace) - in a certain time interval." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adds query that returns the day and the number of detections in that day (by Marketplace) - in a certain time interval." />
+    <MESSAGE value="version11" />
+    <MESSAGE value="new dependency added, testing jenkins mysql plugin" />
+    <MESSAGE value="dependency not working, back to how it was" />
+    <MESSAGE value="java version 17" />
+    <MESSAGE value="changed mysql ip to test jenkins connection" />
+    <MESSAGE value="changed mysql ip (again, now dynamic) to test jenkins connection, only works with jenkins" />
+    <MESSAGE value="mysqlcontainer connected to jenkinscontainer" />
+    <MESSAGE value="dockerfile updated" />
+    <MESSAGE value="start of tests for spring boot" />
+    <MESSAGE value="more changes and tests for rules started" />
+    <MESSAGE value="more changes" />
+    <MESSAGE value="added tests for each rule" />
+    <MESSAGE value="updated rules engine" />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/rest_server$DemoApplicationTests.ic" NAME="DemoApplicationTests Coverage Results" MODIFIED="1673015374950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.appdetex.demo.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/rest_server$AccountServiceTest.ic" NAME="AccountServiceTest Coverage Results" MODIFIED="1673004088693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.appdetex.service.*</FILTER>
+    </SUITE>
   </component>
 </project>
