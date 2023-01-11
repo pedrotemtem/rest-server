@@ -9,7 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="..." />
+    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="...">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/repository/RulesRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/BrandRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/BrandRules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/Rules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/Rules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/service/DetectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/service/DetectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/repository/RulesRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/BrandRules.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/BrandRules.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -179,8 +192,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="demo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="demo" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DemoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="rest-server" />
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.appdetex.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.appdetex.demo.DemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />

@@ -1,10 +1,8 @@
 package com.appdetex.service;
 
 
-import com.appdetex.entity.Audit;
 import com.appdetex.entity.Detection;
 import com.appdetex.repository.DetectionRepository;
-import com.appdetex.repository.RulesRepository;
 import com.appdetex.request.CreateAuditRequest;
 import com.appdetex.request.CreateDetectionRequest;
 import com.appdetex.request.UpdateDetectionRequest;
@@ -12,17 +10,9 @@ import com.appdetex.rulesengine.Rules;
 import com.appdetex.rulesengine.SellerRules;
 import com.appdetex.rulesengine.InflatableJacuzziRule;
 import com.appdetex.rulesengine.BrandRules;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -37,7 +27,7 @@ public class DetectionService {
     @Autowired
     AuditService auditService;
 
-    RulesRepository rulesRepository;
+    ArrayList<Rules> rulesArrayList= new ArrayList<>();
 
     public ArrayList<String> getDetectionsByDay(String initialDate, String endingDate) {
 
@@ -64,9 +54,9 @@ public class DetectionService {
         Rules inflatableJacuzziRule = new InflatableJacuzziRule();
         Rules sellerRules =new SellerRules();
 
-        rulesRepository.save(brandRules);
-        rulesRepository.save(inflatableJacuzziRule);
-        rulesRepository.save(sellerRules);
+        rulesArrayList.add(brandRules);
+        rulesArrayList.add(inflatableJacuzziRule);
+        rulesArrayList.add(sellerRules);
     }
 
     public Detection createDetection(CreateDetectionRequest createDetectionRequest) {
@@ -75,8 +65,7 @@ public class DetectionService {
 
         addRulesToRep();
 
-        List<Rules> rule = rulesRepository.findAll();
-        for (Rules rules1 : rule) {
+        for (Rules rules1 : rulesArrayList) {
             rules1.checkRules(detection);
         }
 
