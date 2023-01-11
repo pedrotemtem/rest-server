@@ -39,7 +39,13 @@ public class Metric {
     private int sum;
 
     public Metric(CreateMetricRequest createMetricRequest) {
-
+        this.harvestProcess = createMetricRequest.getHarvestProcess();
+        this.marketplace = createMetricRequest.getMarketplace();
+        this.numItems = createMetricRequest.getNumItems();
+        this.max = createMetricRequest.getMax();
+        this.min = createMetricRequest.getMin();
+        this.avg = createMetricRequest.getAvg();
+        this.sum = createMetricRequest.getSum();
     }
 
 
