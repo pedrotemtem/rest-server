@@ -13,7 +13,7 @@ public class MetricResponse {
     private int numItems;
     private int max;
     private int min;
-    private int avg;
+    private double avg;
     private int sum;
 
     public MetricResponse(Metric metric) {

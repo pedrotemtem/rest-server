@@ -12,6 +12,6 @@ public class CreateMetricRequest {
     private int numItems;
     private int max;
     private int min;
-    private int avg;
+    private double avg;
     private int sum;
 }

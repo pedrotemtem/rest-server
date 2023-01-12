@@ -33,7 +33,7 @@ public class Metric {
     private int min;
 
     @Column(name="avg")
-    private int avg;
+    private double avg;
 
     @Column(name="sum")
     private int sum;
