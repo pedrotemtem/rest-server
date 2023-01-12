@@ -7,6 +7,6 @@ import lombok.Setter;
 @Getter
 public class CreateAccountRequest {
 
-    private Integer id;
+    private int id;
     private String name;
 }

@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 public class AccountResponse {
 
-    private Integer id;
+    private int id;
     private String name;
     public AccountResponse (Account account) {
         this.id = account.getId();
