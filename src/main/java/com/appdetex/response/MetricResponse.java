@@ -19,6 +19,7 @@ public class MetricResponse {
     public MetricResponse(Metric metric) {
         this.harvestProcess = metric.getHarvestProcess();
         this.marketplace = metric.getMarketplace();
+        this.numItems = metric.getNumItems();
         this.max = metric.getMax();
         this.min = metric.getMin();
         this.avg = metric.getAvg();

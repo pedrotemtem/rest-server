@@ -10,6 +10,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class MetricPkId implements Serializable {
-    private String harvestProcess;
-    private String marketplace;
+    public String harvestProcess;
+    public String marketplace;
 }

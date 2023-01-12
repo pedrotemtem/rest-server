@@ -1,9 +1,7 @@
 package com.appdetex.controller;
 
-import com.appdetex.entity.Detection;
 import com.appdetex.entity.Metric;
 import com.appdetex.request.CreateMetricRequest;
-import com.appdetex.response.DetectionResponse;
 import com.appdetex.response.MetricResponse;
 import com.appdetex.service.MetricService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +26,7 @@ public class MetricController {
 
         metricsList.stream().forEach(metric -> {
             metricsResponseList.add(new MetricResponse(metric));
-        } );
+        });
 
         return metricsResponseList;
     }

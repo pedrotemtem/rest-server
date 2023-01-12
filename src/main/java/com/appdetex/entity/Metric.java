@@ -16,26 +16,26 @@ import javax.persistence.*;
 public class Metric {
 
     @Id
-    @Column(name="Harvest Process")
+    @Column(name="harvest_process")
     private String harvestProcess;
 
     @Id
-    @Column(name="Marketplace")
+    @Column(name="marketplace")
     private String marketplace;
 
-    @Column(name="NumItems")
+    @Column(name="num_items")
     private int numItems;
 
-    @Column(name="Max")
+    @Column(name="max")
     private int max;
 
-    @Column(name="Min")
+    @Column(name="min")
     private int min;
 
-    @Column(name="Avg")
+    @Column(name="avg")
     private int avg;
 
-    @Column(name="Sum")
+    @Column(name="sum")
     private int sum;
 
     public Metric(CreateMetricRequest createMetricRequest) {
@@ -47,8 +47,4 @@ public class Metric {
         this.avg = createMetricRequest.getAvg();
         this.sum = createMetricRequest.getSum();
     }
-
-
-
-
 }
