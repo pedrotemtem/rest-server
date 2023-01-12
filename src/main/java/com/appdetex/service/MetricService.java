@@ -15,6 +15,7 @@ public class MetricService {
     MetricRepository metricRepository;
 
     public List<Metric> getAllMetrics() {
+
         return metricRepository.findAll();
     }
 
