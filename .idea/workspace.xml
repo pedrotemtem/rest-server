@@ -9,19 +9,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="...">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="b15c63f7-d446-4789-8bef-cc5fce610c92" name="Changes" comment="rulesengine updated and rulestests added">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_1_6_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_2_Final.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_12_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_3_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_7_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_3_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_3_0_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_01_2023,_15_20_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_01_2023,_15_20_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_01_2023__15_20__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_01_2023__15_20__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_01_2023,_10_16_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_01_2023,_10_16_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_01_2023,_17_25_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_01_2023__10_16__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_01_2023__10_16__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_04_01_2023__17_25__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_01_2023,_10_10_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_01_2023__10_10__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/repository/RulesRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/BrandRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/BrandRules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/Rules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/rulesengine/Rules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appdetex/service/DetectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appdetex/service/DetectionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/demo/DemoApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/repository/RulesRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/BrandRules.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/rulesengine/BrandRules.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/appdetex/service/DetectionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/controller/AccountControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/controller/AccountControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/service/AccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/service/AccountServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/appdetex/service/DetectionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/appdetex/service/DetectionServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/classpath.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/appdetex/demo/DemoApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/appdetex/service/AccountServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/service/AccountServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/appdetex/service/DetectionServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/appdetex/service/DetectionServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,32 +85,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/pedro.temtem/Documents/rest-server/rest-server&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;d56b0237a348e1e59be94cafd25aaed1&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/pedro.temtem/Documents/rest-server/rest-server",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "spring.configuration.checksum": "fe01ce2a7fbac8fafaed7c982a04e229",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.appdetex.service" />
@@ -113,9 +132,56 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DemoApplication (1)">
+  <component name="RunManager" selected="JUnit.AccountControllerTest">
+    <configuration name="AccountControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.appdetex.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.appdetex.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.controller.AccountControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountControllerTest.getAllAccounts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.appdetex.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.appdetex.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.controller.AccountControllerTest" />
+      <option name="METHOD_NAME" value="getAllAccounts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountServiceTest.getAllAccounts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.appdetex.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.appdetex.service" />
+      <option name="MAIN_CLASS_NAME" value="com.appdetex.service.AccountServiceTest" />
+      <option name="METHOD_NAME" value="getAllAccounts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DetectionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-server" />
+      <module name="demo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.appdetex.service.*" />
@@ -129,40 +195,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DetectionServiceTest.getDetections" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.appdetex.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.appdetex.service" />
-      <option name="MAIN_CLASS_NAME" value="com.appdetex.service.DetectionServiceTest" />
-      <option name="METHOD_NAME" value="getDetections" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DetectionServiceTest.getDetectionsById (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.appdetex.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.appdetex.service" />
-      <option name="MAIN_CLASS_NAME" value="com.appdetex.service.DetectionServiceTest" />
-      <option name="METHOD_NAME" value="getDetectionsById(com.appdetex.entity.Detection)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DetectionServiceTest.getDetectionsById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-server" />
+    <configuration name="DetectionServiceTest.getDetectionsById (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.appdetex.service.*" />
@@ -173,34 +207,6 @@
       <option name="MAIN_CLASS_NAME" value="com.appdetex.service.DetectionServiceTest" />
       <option name="METHOD_NAME" value="getDetectionsById" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SellerRulesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rest-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.appdetex.rulesengine.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.appdetex.rulesengine" />
-      <option name="MAIN_CLASS_NAME" value="com.appdetex.rulesengine.SellerRulesTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="demo" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="demo" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -227,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DetectionServiceTest.getDetectionsById" />
-        <item itemvalue="JUnit.DetectionServiceTest.getDetectionsById (1)" />
+        <item itemvalue="JUnit.AccountControllerTest" />
+        <item itemvalue="JUnit.AccountControllerTest.getAllAccounts" />
         <item itemvalue="JUnit.DetectionServiceTest" />
-        <item itemvalue="JUnit.DetectionServiceTest.getDetections" />
-        <item itemvalue="JUnit.SellerRulesTest" />
+        <item itemvalue="JUnit.DetectionServiceTest.getDetectionsById (2)" />
+        <item itemvalue="JUnit.AccountServiceTest.getAllAccounts" />
       </list>
     </recent_temporary>
   </component>
@@ -254,6 +260,7 @@
       <workItem from="1672847054515" duration="1798000" />
       <workItem from="1673353602468" duration="1405000" />
       <workItem from="1673362029522" duration="745000" />
+      <workItem from="1673535107114" duration="11856000" />
     </task>
     <task id="LOCAL-00001" summary="version11">
       <created>1671531453901</created>
